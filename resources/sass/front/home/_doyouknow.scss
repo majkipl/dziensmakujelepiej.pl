@@ -1,0 +1,87 @@
+#doyouknow.home {
+  background-color: $white;
+  padding: 70px 0;
+
+  @media #{$min-sm} {
+    padding: 100px 0;
+  }
+
+  @media #{$min-md} {
+    padding: 130px 0;
+  }
+
+  @media #{$min-lg} {
+    padding: 170px 0;
+  }
+
+  .title {
+    margin-bottom: 50px;
+
+    @media #{$min-sm} {
+      margin-bottom: 60px;
+    }
+
+    @media #{$min-md} {
+      margin-bottom: 70px;
+    }
+
+    @media #{$min-lg} {
+      left: calc(100% - 98px - 80px);
+      transform: translateX(-100%);
+    }
+
+    @media #{$min-xl} {
+      left: calc(100% - 98px - 95px);
+      transform: translateX(-100%);
+    }
+
+    &::before {
+      content: none;
+    }
+  }
+
+  .img {
+    position: relative;
+    display: block;
+    margin: auto;
+    z-index: 1;
+
+    @media #{$min-lg} {
+      transform: translate((100%/5), -50px);
+    }
+  }
+
+  .content-box {
+    .content {
+      background-color: $lite-blue;
+      padding: 50px 30px;
+      text-align: center;
+      
+      @media #{$min-lg} {
+        padding: 80px 55px;
+        transform: translateX((-100%/7));
+        text-align: right;
+      }
+
+      .text {
+        margin-bottom: 50px;
+        color: $white;
+        font-size: 18px;
+        line-height: 25px;
+
+        @media #{$min-lg} {
+          max-width: 75%;
+          margin-left: auto;
+        }
+      }
+
+      .button {
+        @media #{$min-lg} {
+          position: relative;
+          right: 116px;
+          transform: translateX(50%);
+        }
+      }
+    }
+  }
+}

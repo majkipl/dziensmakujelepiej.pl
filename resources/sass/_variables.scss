@@ -1,7 +1,27 @@
-// Body
-$body-bg: #f8fafc;
+$font: proxima-nova, sans-serif;
+$font-top: itc-american-typewriter, serif;
 
-// Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+$transparent: transparent;
+$white: #FFFFFF;
+$gray: #F2F2F2;
+$placeholder: #B3B3B3;
+
+$border: #666666;
+$border-blue: #376DA2;
+
+$lite-blue: #0657A5;
+$dark-blue: #05498B;
+
+$navy: #17386A;
+$red: #D41317;
+
+$product-gray: #666666;
+$product-black: #000000;
+$product-white: #FFFFFF;
+$product-red: #9B2D32;
+$product-yellow: #E3DBB9;
+
+$min-sm: '(min-width: 576px)';
+$min-md: '(min-width: 768px)';
+$min-lg: '(min-width: 992px)';
+$min-xl: '(min-width: 1200px)';

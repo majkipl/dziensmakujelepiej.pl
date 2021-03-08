@@ -1,2 +1,45 @@
 // Variables
 @import "./variables";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+//@import "./plugins/bootstrap-datetimepicker";
+
+// OWL
+@import "owl.carousel/dist/assets/owl.carousel.min.css";
+@import "owl.carousel/dist/assets/owl.theme.default.min.css";
+
+// Main
+@import "./front/root";
+@import "./front/steps";
+@import "./front/modal";
+
+// Header
+@import "./front/header";
+
+// Footer
+@import "./front/footer";
+
+// Cookies
+@import "./front/cookies";
+
+@import "./front/home/top";
+@import "./front/home/tabs";
+@import "./front/home/about";
+@import "./front/home/doyouknow";
+@import "./front/home/faq";
+@import "./front/home/contact";
+
+@import "./front/warranty/top";
+@import "./front/warranty/info";
+@import "./front/warranty/service";
+
+@import "./front/series/top";
+@import "./front/series/copy";
+@import "./front/series/product";
+@import "./front/series/gallery";
+@import "./front/series/feature";
+@import "./front/series/brands";
+@import "./front/series/carousel";
+@import "./front/series/opinions";
+@import "./front/series/return";

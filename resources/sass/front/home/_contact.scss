@@ -1,0 +1,111 @@
+#contact.home {
+  background-color: $white;
+  padding: 80px 0 80px;
+
+  @media #{$min-sm} {
+    padding: 110px 0 130px;
+  }
+
+  @media #{$min-md} {
+    padding: 150px 0 170px;
+  }
+
+  @media #{$min-lg} {
+    padding: 190px 0 220px;
+  }
+
+  .subtitle {
+    margin-bottom: 50px;
+    font-size: 24px;
+    line-height: 37px;
+
+    &::before, &::after {
+      content: none;
+    }
+
+    @media #{$min-sm} {
+      margin-bottom: 70px;
+      font-size: 27px;
+    }
+
+    @media #{$min-md} {
+      margin-bottom: 90px;
+      font-size: 30px;
+    }
+  }
+
+  .contact-form {
+    .input {
+      background-color: $transparent;
+      display: block;
+      width: 100%;
+      margin-bottom: 25px;
+      padding: 10px;
+      border: 2px solid $border;
+      border-radius: 20px;
+      color: $border;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus-visible {
+        border-color: $lite-blue;
+      }
+
+      &.message {
+        height: 270px;
+      }
+    }
+
+    .label {
+      flex-wrap: nowrap;
+      margin: 0 0 40px;
+
+      @media #{$min-sm} {
+        margin-bottom: 55px;
+      }
+
+      @media #{$min-md} {
+        margin-bottom: 70px;
+      }
+
+      .checkbox {
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        border: 2px solid $border;
+        border-radius: 50%;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:focus-visible {
+          border-color: $lite-blue;
+        }
+
+        &:checked {
+          background-image: radial-gradient($lite-blue 7.5px, $white 7.5px)
+        }
+      }
+
+      .checkbox-text {
+        margin-left: -15px;
+        padding-left: 30px;
+        color: $border;
+        font-size: 13px;
+        line-height: 16px;
+      }
+    }
+
+    &.form-success {
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+    }
+  }
+}

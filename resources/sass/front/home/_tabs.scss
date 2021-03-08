@@ -1,0 +1,180 @@
+#tabs.home {
+  background-color: $dark-blue;
+  padding: 50px 0;
+
+  @media #{$min-sm} {
+    padding: 80px 0;
+  }
+
+  @media #{$min-md} {
+    padding: 110px 0;
+  }
+
+  @media #{$min-lg} {
+    padding: 140px 0;
+  }
+
+  .title {
+    margin-bottom: 50px;
+    color: $white;
+
+    &::before, &::after {
+      background-color: $white;
+    }
+
+    @media #{$min-sm} {
+      margin-bottom: 60px;
+    }
+
+    @media #{$min-md} {
+      margin-bottom: 70px;
+    }
+  }
+
+  .nav-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba($white, 0.2);
+
+    .nav-item {
+      margin-bottom: 0;
+
+      .nav-link {
+        background-color: $transparent;
+        display: flex;
+        align-items: center;
+        height: 65px;
+        padding: 0 20px;
+        border: none;
+        color: $white;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: 0.7;
+
+        &.active {
+          height: 70px;
+          border-bottom: 5px solid $red;
+          opacity: 1;
+        }
+
+        .nav-img {
+          margin: 0 10px;
+
+          @media #{$min-sm} {
+            margin-right: 15px;
+            margin-left: 0;
+          }
+        }
+
+        .nav-head {
+          display: none;
+
+          @media #{$min-sm} {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    position: relative;
+  }
+
+  .serie-head {
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    margin-bottom: 20px;
+    color: $white;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    
+    @media #{$min-sm} {
+      display: none;
+    }
+  }
+
+  .product {
+    background-color: $lite-blue;
+    margin-bottom: 50px;
+    border-radius: 10px;
+
+    .product-img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .product-body {
+      position: relative;
+      padding: 100px 40px 0;
+      margin-top: 140px;
+      height: 428px;
+    }
+
+    .product-head {
+      margin-bottom: 15px;
+      color: $white;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .line {
+      background-color: $white;
+      width: 35px;
+      height: 2px;
+      margin: 0 auto 15px;
+    }
+
+    .product-text {
+      margin-bottom: 25px;
+      color: $white;
+      font-size: 15px;
+      line-height: 23px;
+      text-align: center;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .product-link {
+      position: absolute;
+      bottom: 101px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: inline-block;
+      margin: 25px 0;
+      color: $white;
+      font-size: 13px;
+      line-height: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+    
+    .product-button {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 35px;
+      white-space: nowrap;
+    }
+  }
+}

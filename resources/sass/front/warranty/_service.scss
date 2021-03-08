@@ -1,0 +1,103 @@
+#service.warranty {
+  background-image: linear-gradient($gray 230px, $white 230px);
+  padding: 50px 0;
+
+  @media #{$min-sm} {
+    padding-bottom: 75px;
+  }
+
+  @media #{$min-md} {
+    padding-bottom: 100px;
+  }
+
+  .title {
+    margin-bottom: 50px;
+
+    @media #{$min-sm} {
+      margin-bottom: 60px;
+    }
+
+    @media #{$min-md} {
+      margin-bottom: 70px;
+    }
+
+    @media #{$min-lg} {
+      left: calc(98px + 80px);
+      transform: none;
+    }
+
+    @media #{$min-xl} {
+      left: calc(98px + 95px);
+      transform: none;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .img {
+    position: relative;
+    display: block;
+    margin: auto;
+    z-index: 1;
+
+    @media #{$min-lg} {
+      transform: translateY(-50px);
+    }
+  }
+
+  .content-box {
+    .content {
+      background-color: $lite-blue;
+      padding: 50px 30px;
+
+      @media #{$min-sm} {
+        padding: 70px;
+      }
+
+      @media #{$min-lg} {
+        transform: translateX((100%/9));
+      }
+
+      .text {
+        margin-bottom: 20px;
+        color: $white;
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  .icon {
+    margin: 0;
+
+    .line {
+      position: relative;
+      display: block;
+      margin: 45px auto 7.5px;
+    }
+    
+    .arrow {
+      position: relative;
+      display: block;
+      margin: 0 auto 15px;
+    }
+  }
+
+  .steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .step {
+      align-items: center;
+      margin: 30px 0;
+
+      .step-icon {
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+}

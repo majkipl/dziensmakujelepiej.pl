@@ -1,0 +1,50 @@
+#brands.product {
+  background-image: linear-gradient($gray 50%, $dark-blue 50%);
+  padding: 80px 0 30px;
+
+  @media #{$min-sm} {
+    padding: 110px 0 50px;
+  }
+
+  @media #{$min-md} {
+    padding: 150px 0 70px;
+  }
+
+  @media #{$min-lg} {
+    padding: 190px 0 90px;
+  }
+
+  .container {
+    background-color: $white;
+    padding: 40px 15px;
+
+    @media #{$min-sm} {
+      padding: 60px 15px;
+    }
+  
+    @media #{$min-lg} {
+      padding: 80px 15px;
+    }  
+  }
+
+  .title {
+    margin-bottom: 30px;
+  }
+
+  .product-link {
+    display: block;
+
+    .brand-box {
+      max-width: 160px;
+      height: 80px;
+      margin: 10px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .brand-img {
+        padding: 10px;
+      }
+    }
+  }
+}

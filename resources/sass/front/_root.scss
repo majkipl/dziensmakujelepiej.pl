@@ -1,0 +1,93 @@
+body {
+    font-family: $font;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.button-div {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    background-color: $red;
+    padding: 23px 42px;
+    border: 2px solid $red;
+    border-radius: 38px;
+    color: $white;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all .3s;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover, &:focus-visible {
+        background-color: $transparent;
+        padding: 23px 22px;
+        color: $red;
+        text-decoration: none;
+
+        &.button-alt {
+            background-color: $transparent;
+            color: $white;
+        }
+    }
+}
+
+.link {
+    color: $red;
+    font-weight: bold;
+
+    &:hover {
+        color: $red;
+    }
+}
+
+.title {
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $navy;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 49px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @media #{$min-sm} {
+        font-size: 36px;
+    }
+
+    @media #{$min-md} {
+        font-size: 40px;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            background-color: $navy;
+            top: 50%;
+            width: 66px;
+            height: 2px;
+        }
+
+        &::before {
+            left: -32px;
+            transform: translate(-100%, -50%);
+        }
+
+        &::after {
+            left: 100%;
+            transform: translate(32px, -50%);
+        }
+    }
+}

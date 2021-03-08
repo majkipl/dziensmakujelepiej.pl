@@ -1,0 +1,146 @@
+#carousel.product {
+  background-color: $dark-blue;
+  padding: 30px 0;
+
+  @media #{$min-lg} {
+    padding: 40px 0;
+  }
+
+  .title {
+    left: 0;
+    transform: none;
+    color: $white;
+    margin-bottom: 50px;
+
+    &::before, &::after {
+      content: none;
+    }
+
+    @media #{$min-lg} {
+      margin-bottom: 30px;
+    }
+  }
+
+  .line {
+    background-color: $white;
+    display: none;
+    width: 66px;
+    height: 2px;
+    margin-bottom: 30px;
+
+    @media #{$min-lg} {
+      display: block;
+      margin-bottom: 50px;
+    }
+  }
+
+  .product {
+    background-color: $lite-blue;
+    border-radius: 10px;
+
+    .product-img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+    }
+
+    .product-body {
+      position: relative;
+      padding: 100px 40px 0;
+      margin-top: 140px;
+      height: 428px;
+    }
+
+    .product-head {
+      margin-bottom: 15px;
+      color: $white;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .line {
+      background-color: $white;
+      width: 35px;
+      height: 2px;
+      margin: 0 auto 15px;
+    }
+
+    .product-text {
+      margin-bottom: 25px;
+      color: $white;
+      font-size: 13px;
+      line-height: 20px;
+      text-align: center;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .product-link {
+      position: absolute;
+      bottom: 101px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: inline-block;
+      margin: 25px 0;
+      color: $white;
+      font-size: 13px;
+      line-height: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+    
+    .product-button {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 35px;
+      white-space: nowrap;
+    }
+  }
+
+  .owl-carousel {
+    .owl-nav {
+      position: absolute;
+      top: -50px;
+      right: 50%;
+      transform: translateX(50%);
+
+      .owl-prev, .owl-next {
+        width: 70px;
+        height: 70px;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover, &:focus-visible {
+          background-color: $lite-blue;
+        }
+      }
+
+      .owl-prev {
+        transform: rotate(180deg);
+      }
+
+      .owl-next {
+        transform: none;
+      }
+
+      @media #{$min-lg} {
+        top: -140px;
+        right: 0;
+        transform: none;
+      }
+    }
+  }
+}

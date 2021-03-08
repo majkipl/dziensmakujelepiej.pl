@@ -1,0 +1,128 @@
+#top.home {
+    background: no-repeat center / cover;
+    background-image: url("/images/home/top/bg.jpg");
+    position: relative;
+
+    .shadow-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100vw;
+      height: 384px;
+    }
+
+    .top-col-lg-2\/5 {
+        color: $white;
+        text-align: center;
+        z-index: 2;
+
+        @media #{$min-lg} {
+            flex: 0 0 40%;
+            max-width: 546px;
+            margin-left: auto;
+        }
+
+        .head {
+            margin-top: 110px;
+            margin-bottom: 20px;
+            font-family: $font-top;
+            font-weight: 500;
+            font-size: 29px;
+            line-height: 29px;
+        }
+
+        .icon {
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        .lead {
+            margin-bottom: 30px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        .mlynki {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .button {
+            margin-bottom: 30px;
+        }
+    }
+
+    .top-col-lg-3\/5 {
+        padding: 0;
+
+        @media #{$min-lg} {
+            flex: 0 0 60%;
+            max-width: 60%;
+        }
+
+        .carousel {
+            height: 100%;
+
+            .carousel-inner {
+                height: 100%;
+
+                .carousel-item {
+                    height: 100%;
+
+                    .carousel-img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        max-height: 768px;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+            }
+
+            .carousel-indicators {
+                li {
+                    background-color: $transparent;
+                    background-image: radial-gradient(
+                        $transparent 3px,
+                        $white 3px
+                    );
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    opacity: 1;
+
+                    &.active {
+                        background-color: $white;
+                    }
+                }
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                top: unset;
+                width: 70px;
+                height: 70px;
+                opacity: 1;
+
+                &:hover,
+                &:focus-visible {
+                    background-color: $lite-blue;
+                }
+
+                .carousel-control-prev-icon,
+                .carousel-control-next-icon {
+                    background-image: url("/images/svg/home/top/arrow.svg");
+                }
+                .carousel-control-prev-icon {
+                    transform: rotate(180deg);
+                }
+                .carousel-control-next-icon {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+}

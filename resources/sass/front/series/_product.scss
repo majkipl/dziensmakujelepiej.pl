@@ -1,0 +1,261 @@
+.product-info {
+  position: relative;
+  padding: 50px 0 40px;
+
+  @media #{$min-sm} {
+    padding: 75px 0 65px;
+  }
+
+  @media #{$min-md} {
+    padding: 100px 0 80px;
+  }
+
+  @media #{$min-lg} {
+    padding: 130px 0 90px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 23.28vw;
+      height: 216px;
+    }
+  }
+
+  &.product-info-0 {
+    background-color: $white;
+
+    @media #{$min-lg} {
+      &::before {
+        background-color: $gray;
+        left: 0;
+      }
+
+      .title {
+        left: 98px;
+        transform: none;
+      }
+
+      .button-div {
+        text-align: left;
+
+        .button {
+          position: relative;
+          left: 76px;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    @media #{$min-sm} {
+      .color-box {
+        left: 15px;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &.product-info-1 {
+    background-color: $gray;
+
+    @media #{$min-lg} {
+      &::before {
+        background-color: $white;
+        right: 0;
+      }
+  
+      .title {
+        left: 100%;
+        transform: translateX(-100%);
+      }
+
+      .button-div {
+        text-align: right;
+
+        .button {
+          position: relative;
+          right: 76px;
+          transform: translateX(50%);
+        }
+      }
+    }
+
+    @media #{$min-sm} {
+      .color-box {
+        right: 15px;
+        align-items: flex-end;
+      }
+    }
+  }
+
+  &.product-info--1 {
+    &::before {
+      background-color: $dark-blue;
+    }
+  }
+
+  .title {
+    margin-bottom: 20px;
+
+    &::before, &::after {
+      content: none;
+    }
+
+    @media #{$min-lg} {
+      margin-right: 98px;
+
+      &::before {
+        content: '';
+      }
+    }
+  }
+
+  .button {
+    margin-bottom: 50px;
+  }
+
+  .product-img {
+    position: relative;
+    display: block;
+    margin: 0 auto 40px;
+    z-index: 1;
+
+    @media #{$min-sm} {
+      margin-bottom: 80px;
+    }  
+  }
+
+  .color-box {
+    background-color: $lite-blue;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 255px;
+    padding: 25px;
+    margin: auto;
+    
+    @media #{$min-sm} {
+      position: absolute;
+      bottom: 0;
+      height: 255px;
+    }
+
+    .color-select {
+      margin-bottom: 20px;
+
+      .color-option {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border: 2px solid;
+        border-radius: 50%;
+        transition: all .5s;
+
+        @media #{$min-sm} {
+          display: block;
+          margin-right: 0;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &.gray {
+          border-color: $product-gray;
+
+          &:not(.active) {
+            background-color: $product-gray;
+          }
+
+          &.active {
+            background: radial-gradient($product-gray 7.5px, $transparent 7.5px);
+          }
+        }
+
+        &.black {
+          border-color: $product-black;
+
+          &:not(.active) {
+            background-color: $product-black;
+          }
+
+          &.active {
+            background: radial-gradient($product-black 7.5px, $transparent 7.5px);
+          }
+        }
+
+        &.white {
+          border-color: $product-white;
+
+          &:not(.active) {
+            background-color: $product-white;
+          }
+
+          &.active {
+            background: radial-gradient($product-white 7.5px, $transparent 7.5px);
+          }
+        }
+
+        &.red {
+          border-color: $product-red;
+
+          &:not(.active) {
+            background-color: $product-red;
+          }
+
+          &.active {
+            background: radial-gradient($product-red 7.5px, $transparent 7.5px);
+          }
+        }
+
+        &.yellow {
+          border-color: $product-yellow;
+
+          &:not(.active) {
+            background-color: $product-yellow;
+          }
+
+          &.active {
+            background: radial-gradient($product-yellow 7.5px, $transparent 7.5px);
+          }
+        }
+      }
+    }
+
+    .color-text {
+      color: $white;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 1px;  
+    }
+  }
+
+  .features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .feature {
+      align-items: center;
+      margin: 30px 0;
+
+      @media #{$min-lg} {
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      .feature-icon {
+        display: block;
+        max-width: 40px;
+        max-height: 40px;
+        margin: auto;
+      }
+    }
+  }
+}

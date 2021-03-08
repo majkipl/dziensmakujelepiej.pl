@@ -1,0 +1,69 @@
+#top.product {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center, center, 50% 75%;
+  background-size: cover, cover, contain;
+  background-color: $lite-blue;
+  height: 100vh;
+  max-height: 768px;
+
+  @media #{$min-sm} {
+    background-position: center, center, bottom;
+    background-size: cover, cover, auto 512px;
+  }
+
+  .video {
+    display: none;
+
+    @media #{$min-lg} {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .container {
+    position: relative;
+    top: 200px;
+    transform: translateY(-50%);
+
+    .title {
+      color: $white;
+
+      &::before, &::after {
+        background-color: $white;
+      }
+    }
+  }
+
+  .scroll-button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $transparent;
+    width: 90px;
+    height: 45px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      background-color: $dark-blue;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
+}

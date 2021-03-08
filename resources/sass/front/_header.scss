@@ -1,0 +1,191 @@
+.navbar {
+    background-color: $dark-blue;
+    height: 81px;
+    padding: 0 15px;
+    border-bottom: 1px solid rgba($white, 0.2);
+    transition: background-color .3s;
+
+    &.transparent {
+        background-color: $transparent;
+    }
+
+    @media #{$min-xl} {
+        padding-right: 0;
+    }
+
+    .navbar-box {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        @media #{$min-xl} {
+            width: auto;
+        }
+
+        .navbar-brand {
+            padding: 0;
+            margin-right: 30px;
+        }
+    }
+
+    .navbar-span {
+        display: none;
+        margin-right: 15px;
+        color: $white;
+        font-family: $font-top;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 22px;
+
+        @media #{$min-sm} {
+            display: block;;
+        }
+    }
+
+    .navbar-toggler {
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        margin-left: auto;
+        border-radius: 50%;
+        transition: background-color 1s;
+
+        &:focus {
+            outline: none;
+            background-color: $red;
+        }
+
+        .toggler-icon {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $white;
+            width: 35px;
+            height: 4px;
+            padding: 0;
+            border: none;
+            border-radius: 2px;
+            transition: transform .3s;
+
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                background-color: $white;
+                width: 35px;
+                height: 4px;
+                padding: 0;
+                border: none;
+                border-radius: 2px;
+                transition: transform .3s;
+            }
+
+            &::before {
+                top: -10px;
+            }
+
+            &::after {
+                top: 10px;
+            }
+        }
+
+        &[aria-expanded=true] {
+            .toggler-icon {
+                transform: translate(-50%, -50%) rotate(-45deg);
+
+                &::before {
+                    transform: translateY(10px) rotate(90deg);
+                }
+
+                &::after {
+                    transform: translateY(-10px) rotate(90deg);
+                }
+            }
+        }
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 81px;
+        right: 0;
+        max-width: 420px;
+        width: 100%;
+        max-height: calc(100vh - 81px);
+
+        &.show {
+            overflow: auto;
+        }
+
+        @media #{$min-xl} {
+            position: static;
+            display: flex;
+            justify-content: flex-end;
+            max-width: unset;
+            width: auto;
+            overflow: unset;
+        }
+
+        .nav-link {
+            background-color: $dark-blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid rgba($white, 0.2);
+            color: $white;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 22px;
+            letter-spacing: 1px;
+            text-align: center;
+            text-transform: uppercase;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:hover, &:focus-visible {
+                background-color: $lite-blue;
+            }
+
+            @media #{$min-xl} {
+                background-color: $transparent;
+                height: 80px;
+                padding: 20px;
+                border: none;
+                border-left: 1px solid rgba($white, 0.2);
+            }
+        }
+
+        .dropdown-menu {
+            padding: 0;
+            margin: 0;
+            border: 1px solid $border-blue;
+            border-radius: 0;
+
+            .dropdown-item {
+                background-color: $dark-blue;
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding: 10px 35px;
+                border: none;
+                color: $white;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 22px;
+                letter-spacing: 1px;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &:hover, &:focus-visible {
+                    background-color: $lite-blue;
+                }
+            }
+        }
+    }
+}

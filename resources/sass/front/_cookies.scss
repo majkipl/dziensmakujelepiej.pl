@@ -1,0 +1,28 @@
+#cookies {
+  position: fixed;
+  background-color: $dark-blue;
+  display: none;
+  bottom: 0;
+  width: 100%;
+  padding: 18px;
+  z-index: 2;
+
+  .cookie {
+    margin: 18px 0 0;
+  }
+
+  .cookie-button {
+    background-color: $transparent;
+    padding: 0;
+    border: none;
+  }
+
+  .arrow {
+    margin-right: 8px;
+  }
+
+  .text {
+    margin: 0;
+    color: $white;
+  }
+}

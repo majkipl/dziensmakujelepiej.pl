@@ -1,0 +1,77 @@
+.feature-info {
+  .feature-name {
+    margin-bottom: 15px;
+    color: $navy;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 37px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  
+    @media #{$min-sm} {
+      font-size: 25px;
+    }
+  
+    @media #{$min-md} {
+      font-size: 28px;
+    }
+  }
+
+  .line {
+    background-color: $navy;
+    display: block;
+    width: 66px;
+    height: 2px;
+    margin-bottom: 30px;
+  }
+
+  .feature-text {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .feature-img {
+    display: block;
+    width: 445px;
+    margin: 30px auto;
+
+    @media #{$min-lg} {
+      position: relative;
+      top: 40px;
+      margin: 0;
+    }
+  }
+
+  &.feature-info-0 {
+    background-color: $gray;
+    text-align: right;
+
+    @media #{$min-lg} {
+      background-image: linear-gradient(90deg, $gray calc(50% + 95px), $white calc(50% + 95px));
+    }
+    @media #{$min-xl} {
+      background-image: linear-gradient(90deg, $gray calc(50% + 110px), $white calc(50% + 110px));
+    }
+
+    .line {
+      margin-left: auto;
+    }
+  }
+
+  &.feature-info-1 {
+    background-color: $white;
+    text-align: left;
+
+    @media #{$min-lg} {
+      background-image: linear-gradient(90deg, $gray calc(50% - 255px), $white calc(50% - 255px));
+    }
+    @media #{$min-xl} {
+      background-image: linear-gradient(90deg, $gray calc(50% - 300px), $white calc(50% - 300px));
+    }
+
+    .line {
+      margin-right: auto;
+    }
+  }
+}
