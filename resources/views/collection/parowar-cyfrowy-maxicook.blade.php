@@ -77,41 +77,7 @@
     </section>
 
     @include('collection.section.carousel-preparation')
-
-    <section id="opinions" class="product">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-10">
-                    <h2 class="title">Opinie klientów</h2><span class="line"></span>
-                    <div class="owl-carousel">
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Grzegorz</h3>
-                                        <p class="opinion-text">jakość adekwatna do ceny. polecam produkt.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Krzysztof</h3>
-                                        <p class="opinion-text">Gorąco polecam!!!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @include('collection.section.carousel-opinions')
     @include('collection.section.return')
     @include('common.modal')
 

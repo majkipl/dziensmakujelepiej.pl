@@ -98,52 +98,7 @@
     </section>
 
     @include('collection.section.carousel-preparation')
-
-    <section id="opinions" class="product">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-10">
-                    <h2 class="title">Opinie klientów</h2><span class="line"></span>
-                    <div class="owl-carousel">
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Tomasz Konstanty</h3>
-                                        <p class="opinion-text">Super opiekacz...mój 8 letni syn od razu przy zakupie stwierdził że brakuje kiełbasy do grillowania :) Warto wspomnieć że opiekacz ma bardzo łatwo wymienne formy do kanapek, grillowania i gofrów. Nawet w instrukcji jest przepis..jak by ktoś nie wiedział jak zrobić. Świetnie wygląda, moc taka że się ciężko przestawić ze starego ;) . wygodne zapięcie...no i w ogóle. Marka dobrze zapracowała na pięciogwiazdkową opinię... tylko ta kiełbasa :) ...</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Monika</h3>
-                                        <p class="opinion-text">Zakupiony produkt zaskoczył mnie jakością i solidnością wykonania jak i funkcjonowania. Cena rozsądna a w zamian bardzo dobra jakość. Płytki są głębokie. Rączka nie nagrzewa się. Opiekacz z łatwością można zamknąć nawet przy potrójnym toście. Tosty chrupiące. Zupełnie inne niż z dotychczas używanego produktu firmy konkurencyjnej i oferującej droższe produkty. Podobnie z płytką do grillowania. Łosoś w folii, czy zwykła bułka do hot- doga - rewelacja. Czas przygotowania krótszy niż się spodziewałam. Łosoś był gotowy w mniej niż 2 min. Gofrów jeszcze nie testowałam. Gorąco polecam.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Kika</h3>
-                                        <p class="opinion-text">Opiekacz zaskoczył mnie jakością.Nie sprawdzałam funkcji gofrownicy. Natomiast płytki do grilla i kanapek naprawdę się sprawdzają. Jestem bardzo zadowolona.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @include('collection.section.carousel-opinions')
     @include('collection.section.return')
     @include('common.modal')
 

@@ -65,6 +65,7 @@
         </div>
     </section>
 
+    @include('collection.section.carousel-opinions')
     @include('home.section.steps')
     @include('common.modal')
 

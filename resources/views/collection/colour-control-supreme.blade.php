@@ -122,30 +122,7 @@
     </section>
 
     @include('collection.section.carousel-irons')
-
-    <section id="opinions" class="product">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-10">
-                    <h2 class="title">Opinie klientów</h2><span class="line"></span>
-                    <div class="owl-carousel">
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Zosia</h3>
-                                        <p class="opinion-text">Prasowałam jedynie raz ale myślę, że żelazko poradziło&amp;nbsp;sobie zaskakująco dobrze (przy parze włączonej na &quot;maksa&quot; i maksymalnej temperaturze) z grubą, pogniecioną bawełnianą pościelą, porównywalnie dobrze co stacja parowa bosha za 1000zł, której używam na co dzień. Przycisk do dodatkowego wyrzutu pary jakoś nie chciał za bardzo za działać ale w sumie nie był za bardzo potrzebny. Jedyny denerwujący minus jest taki, że podczas trzymania żelazka przypadkowo cały czas naciska się przycisk zmieniający temperaturę i trzeba na to uważać.... W porównaniu do stacji parowej jest też cięższe. Ale ogólnie myślę, że w tej cenie jest naprawdę super :)</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @include('collection.section.carousel-opinions')
     @include('collection.section.return')
     @include('common.modal')
 

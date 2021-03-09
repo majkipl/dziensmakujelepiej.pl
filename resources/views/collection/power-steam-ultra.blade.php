@@ -181,52 +181,7 @@
     </section>
 
     @include('collection.section.carousel-irons')
-
-    <section id="opinions" class="product">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-10">
-                    <h2 class="title">Opinie klientów</h2><span class="line"></span>
-                    <div class="owl-carousel">
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Mario51</h3>
-                                        <p class="opinion-text">najlepsze żelazko jakie miałem. Inne renomowane firmy droższe dwu-trzykrotnie się chowają!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">leszek520</h3>
-                                        <p class="opinion-text">Żelazko posiada dużą moc co połączeniu z dobrym ślizgiem stopy sprawia że prasowanie niczym nie odbiega od żelazek z półki cenowej powyżej 350zł - polecam.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Axa</h3>
-                                        <p class="opinion-text">Jest super - potrzebowałam żelazka nr 2 (do mieszkania, które będę wynajmować) i najpierw chciałam odmiany, ale ostatecznie znowu wybrałam to. Ma dużą moc, no i kabel nie jest taki denerwująco krótki, jak w innych kandydatach :) Jestem zadowolona z tego żelazka, mój egzemplarz nr 1 działa długo i bez zarzutu, pewnie takie będzie i to :)</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @include('collection.section.carousel-opinions')
     @include('home.section.steps')
     @include('common.modal')
 

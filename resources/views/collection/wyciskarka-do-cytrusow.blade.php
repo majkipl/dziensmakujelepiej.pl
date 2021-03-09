@@ -91,49 +91,7 @@
     </section>
 
     @include('collection.section.carousel-preparation')
-
-    <section id="opinions" class="product">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-10">
-                    <h2 class="title">Opinie klientów</h2><span class="line"></span>
-                    <div class="owl-carousel">
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10"><img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Zofia</h3>
-                                        <p class="opinion-text">Wyciskarka firmy Russell Hobbs, jest bardzo funkcjonalna. Dokładnie wyciska cytrusy. Nie należy do głośnych urządzeń, pracuje cicho. Rozmiar cytrusa nie ma znaczenia, świetnie radzi sobie z cytrynami, pomarańczami, grejpfrutami. Produkt wykonany estetycznie i łatwy w obsłudze. Serdecznie polecam wyciskarkę do cytrusów Russell Hobbs :)</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10"><img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Kamila</h3>
-                                        <p class="opinion-text">Bardzo dobra wyciskarka do cytrusów. Cicha, łatwa w obsłudze, z dobrą mocą. Owoc jest cały wydrążony, przez co nic się nie marnuje. Łatwa w późniejszym myciu. Teraz wyciskanie świeżego soku z rana to sama przyjemność. Z czystym sumieniem polecam.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10"><img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Dagmara</h3>
-                                        <p class="opinion-text">Wyciskarka w 100% spełnia swoją funkcję, sok wyciśnięty do ostatniej kropli. Brudne części po wciśnięciu soku szybciutko myje się ręcznie, można także myć w zmywarce. Polecam.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @include('collection.section.carousel-opinions')
     @include('collection.section.return')
     @include('common.modal')
 

@@ -92,52 +92,7 @@
     </section>
 
     @include('collection.section.carousel-irons')
-
-    <section id="opinions" class="product">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-10">
-                    <h2 class="title">Opinie klientów</h2><span class="line"></span>
-                    <div class="owl-carousel">
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Beata</h3>
-                                        <p class="opinion-text">Używam parownicy od kilku miesięcy i jestem bardzo zadowolona. Dzięki tej parownicy, bezproblemowo mogę szybko usunąć zagniecenia na ubraniach. Polecam.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Krisu93</h3>
-                                        <p class="opinion-text">Super parownica, poradziła sobie z koszulą, której żelazko nie dawało rady. Grubą kurtkę też bezproblemowo doprowadziła do ładu. Jak najbardziej sprzęt można polecić.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Ewelina</h3>
-                                        <p class="opinion-text">Parownica świetnie sprawdza się w podróży. Prasowanie bez wyciągania deski do prasowania jest również ogromnym plusem na codzień. Jeśli nie ma miejsca do powieszenia ubrania i prasowania w pionie, polecam położyć je na łóżku czy fotelu. Fajny produkt, jestem zadowolona z efektów prasowania i odświeżania ubrań.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @include('collection.section.carousel-opinions')
     @include('collection.section.return')
     @include('common.modal')
 

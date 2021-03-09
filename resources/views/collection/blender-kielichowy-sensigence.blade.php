@@ -67,6 +67,7 @@
     </section>
 
     @include('collection.section.carousel-preparation')
+    @include('collection.section.carousel-opinions')
     @include('collection.section.return')
     @include('common.modal')
 

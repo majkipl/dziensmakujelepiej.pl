@@ -128,52 +128,7 @@
     </section>
 
     @include('collection.section.carousel-irons')
-
-    <section id="opinions" class="product">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-10">
-                    <h2 class="title">Opinie klientów</h2><span class="line"></span>
-                    <div class="owl-carousel">
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Tuśka82</h3>
-                                        <p class="opinion-text">Żelazko spełnia moje oczekiwania, gładko sunie zarówno po materiale grubszym, jak i cieńszym, nie &quot;przyłapuje&quot;. Jestem bardzo zadowolona z zakupu.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Eweelka</h3>
-                                        <p class="opinion-text">Żelazko bardzo fajnie się nagrzewa, zbiorki na wodę jest bardzo pojemny, wystarczy na maaasę prasowania 😅. A funkcja stałej temperatury - &amp;gt; rewelacja!! Już nie muszę się martwić, że przypalę swoją ulubiona bluzkę czy koszule męża 😅. Polecam z całego serca ♥️</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">gocha</h3>
-                                        <p class="opinion-text">kupione na prezent dla synowej i syna, bardzo są zadowoleni</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @include('collection.section.carousel-opinions')
     @include('collection.section.return')
     @include('common.modal')
 

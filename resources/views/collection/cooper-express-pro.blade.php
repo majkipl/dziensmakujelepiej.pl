@@ -113,52 +113,7 @@
     </section>
 
     @include('collection.section.carousel-irons')
-
-    <section id="opinions" class="product">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-10">
-                    <h2 class="title">Opinie klientów</h2><span class="line"></span>
-                    <div class="owl-carousel">
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Magdalena</h3>
-                                        <p class="opinion-text">Żelazko jest poręczne, szybko się nagrzewa, ładnie wygląda (ma drobinki brokatu co jest raczej niespotykane) ;)</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">krzysztof</h3>
-                                        <p class="opinion-text">Wszystko ok! Jestem zadowolony.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Andrzej</h3>
-                                        <p class="opinion-text">Żelazko ładnie się prezentuje, szybko się nagrzewa i dobrze się nim prasuje. Wszystkie zabezpieczenia w razie pozostawienia... działają bez zarzutu. Za tą cenę nic tylko kupować !</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @include('collection.section.carousel-opinions')
     @include('collection.section.return')
     @include('common.modal')
 

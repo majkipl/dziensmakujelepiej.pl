@@ -101,52 +101,7 @@
     </section>
 
     @include('collection.section.carousel-irons')
-
-    <section id="opinions" class="product">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-10">
-                    <h2 class="title">Opinie klientów</h2><span class="line"></span>
-                    <div class="owl-carousel">
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Krystyna</h3>
-                                        <p class="opinion-text">Bardzo dobry produkt, wysoka jakość za przystępną cenę. Żelazko proste w obsłudze, duża funkcjonalność, mocne uderzenie pary. Stopa wyprofilowana, co ułatwia prasowanie. Estetyczny design i kolorystyka.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Zbigniew</h3>
-                                        <p class="opinion-text">Produkt zasługuje na szczególną uwagę ponieważ jest wykonany z materiałów bardzo dobrej jakości, przewód elektryczny jest trwały i długi. Obsługa nie jest skomplikowana, jest wręcz prosta i łatwa.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Małgorzata S</h3>
-                                        <p class="opinion-text">Uważam, iż wasz produkt zasługuje na miano najlepszego w mieście, gdyż sprawuje się wyśmienicie. Po pierwszym użyciu już czułam, że ten produkt jest stworzony dla mnie. </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @include('collection.section.carousel-opinions')
     @include('collection.section.return')
     @include('common.modal')
 

@@ -77,52 +77,7 @@
     </section>
 
     @include('collection.section.carousel-preparation')
-
-    <section id="opinions" class="product">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-10">
-                    <h2 class="title">Opinie klientów</h2><span class="line"></span>
-                    <div class="owl-carousel">
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Weronika</h3>
-                                        <p class="opinion-text">Od dłuższego czasu zastanawiałam się nad zakupem tego miksera. Początkowo zaintrygował mnie elegancki i nowoczesny design. Po zapoznaniu się z opisem producenta dotyczącym funkcji (mieszadła HELIX BEATERS, haki do ciasta, ubijaczki, funkcja turbo boost) zdecydowałam, że to właśnie mój idealny wybór. Po dzisiejszych eksperymentach w kuchni muszę przyznać, że się nie zawiodłam. Jeśli szukasz połączenia designu i funkcjonalności w dobrej cenie to mogę Ci szczerze polecić zakup tego urządzenia :)</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Wojciech</h3>
-                                        <p class="opinion-text">Jest OK, mogę polecić. Wydaje mi się, że miksuje o wiele lepiej od takiego zwykłego miksera. Dodatkowo bardzo fajnie ugniata ciasto na pizzę , mniej wysiłku a ciasto lepiej wyrobione . Coś jak z myciem zębów zwykłą oraz soniczną szczoteczką :)</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Michał</h3>
-                                        <p class="opinion-text">Nowoczesny design, praktyczny pojemnik na osprzęt, który razem z mikserem tworzy całość, solidne wykonanie, bardzo dobrze stosunek jakości do ceny :) POLECAM.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @include('collection.section.carousel-opinions')
     @include('collection.section.return')
     @include('common.modal')
 

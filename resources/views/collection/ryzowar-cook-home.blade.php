@@ -80,52 +80,7 @@
     </section>
 
     @include('collection.section.carousel-preparation')
-
-    <section id="opinions" class="product">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-10">
-                    <h2 class="title">Opinie klientów</h2><span class="line"></span>
-                    <div class="owl-carousel">
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Eliza</h3>
-                                        <p class="opinion-text">Jestem bardzo zadowolona. Jeśli ktoś ma dodatkowe miejsce w kuchni to zdecydowanie polecam! Ryż z tego urządzenia jest o niebo lepszy :)</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Gosia</h3>
-                                        <p class="opinion-text">Zakup wykonałam po przeczytaniu opinii innych użytkowników. Proste, intuicyjne urządzenie do przygotowania ryżu takiego jak lubię, sypkiego bez nadmiaru wody.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">andy295</h3>
-                                        <p class="opinion-text">Funkcjonalny, nowoczesny design, idealny na potrzeby domowe, niewielkie rozmiary ułatwiają przechowywanie.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @include('collection.section.carousel-opinions')
     @include('collection.section.return')
     @include('common.modal')
 

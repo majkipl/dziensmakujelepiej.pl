@@ -16,7 +16,7 @@
                     <li class="dropright"><button class="dropdown-item dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kolekcje śniadaniowe</button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="/honeycomb">Honeycomb</a></li>
-                            <!-- <li><a class="dropdown-item" href="/structure">Structure</a></li> -->
+                            <li><a class="dropdown-item" href="/structure">Structure</a></li>
                             <li><a class="dropdown-item" href="/inspire">Inspire</a></li>
                             <li><a class="dropdown-item" href="/retro">Retro</a></li>
                             <li><a class="dropdown-item" href="/geo-steel">Geo Steel</a></li>
@@ -48,7 +48,7 @@
                             <li><a class="dropdown-item" href="/zestaw-do-raclette-fiesta">Zestaw do Raclette Fiesta</a></li>
                             <li><a class="dropdown-item" href="/wyciskarka-do-cytrusow">Wyciskarka do cytrusów</a></li>
                             <li><a class="dropdown-item" href="/frytownica-cyclofry-plus">Frytownica Cyclofry Plus</a></li>
-                            <!-- <li><a class="dropdown-item" href="/blender-kielichowy-sensigence">Blender kielichowy Sensigence</a></li> -->
+                            <li><a class="dropdown-item" href="/blender-kielichowy-sensigence">Blender kielichowy Sensigence</a></li>
                             <li><a class="dropdown-item" href="/blender-reczny-desire">Blender ręczny Desire</a></li>
                         </ul>
                     </li>

@@ -98,52 +98,7 @@
     </section>
 
     @include('collection.section.carousel-irons')
-
-    <section id="opinions" class="product">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-10">
-                    <h2 class="title">Opinie klientów</h2><span class="line"></span>
-                    <div class="owl-carousel">
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Ania</h3>
-                                        <p class="opinion-text">Bardzo dobry produkt w dobrej cenie. Polecam</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Bogna</h3>
-                                        <p class="opinion-text">Żelazko Russel Hobbs Copper Express jest fantastyczne. Bardo szybko się nagrzewa,dobrze manewruje się nim,prasowanie nie wymaga dużego nacisku. A przy tym fantastyczny design. Polecam z przekonaniem.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="opinion">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-10">
-                                        <img class="opinion-img lazy" data-src="{{ asset('images/svg/quote.svg') }}" alt="" />
-                                        <h3 class="opinion-client">Marta</h3>
-                                        <p class="opinion-text">Super żelazko! Miałam wiele urzadzeń do prasowania, ale to według mnie jest zdecydowanie najlepsze. Polecam z czystym sercem! :) ładnie doprasowuje nawet najbardziej upierdliwe zagniecenia.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @include('collection.section.carousel-opinions')
     @include('collection.section.return')
     @include('common.modal')
 
