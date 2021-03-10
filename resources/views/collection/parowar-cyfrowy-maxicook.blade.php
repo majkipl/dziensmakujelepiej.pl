@@ -43,39 +43,7 @@
         </div>
     </section>
 
-    <section id="brands" class="product">
-        <div class="container">
-            <h2 class="title">Gdzie kupić</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <div class="row">
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.mediaexpert.pl/agd-male/do-kuchni/parowary/parowar-russell-hobbs-maxicook-23560-56" target="_blank" rel="noopener noreferrer" aria-label="mediaexpert">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/mediaexpert.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.avans.pl/agd-male/do-kuchni/parowary/parowar-russell-hobbs-maxicook-23560-56" target="_blank" rel="noopener noreferrer" aria-label="avans">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/avans.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.electro.pl/agd-male/do-kuchni/parowary/parowar-russell-hobbs-maxicook-23560-56" target="_blank" rel="noopener noreferrer" aria-label="electro">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/electro.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://maxelektro.pl/sklep/karta-produktu/parowar-russell-hobbs-23560-56,67561.html" target="_blank" rel="noopener noreferrer" aria-label="maxelektro">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/maxelektro.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://mambonus.pl/katalog/agd/parowar_cyfrowy_maxicook_23560-56_russell_hobbs-2270" target="_blank" rel="noopener noreferrer" aria-label="mambonus">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/mambonus.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.zadowolenie.pl/male-agd/do-kuchni/parowary-i-kombiwary/russell-hobbs-parowar-maxicook-23560-56" target="_blank" rel="noopener noreferrer" aria-label="zadowolenie">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/zadowolenie.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.kakto.pl/male-agd-do-kuchni/parowary-i-kombiwary/russell-hobbs-parowar-maxicook-23560-56" target="_blank" rel="noopener noreferrer" aria-label="kakto">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/kakto.png') }}" alt="" /></div>
-                            </a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @include('collection.section.brand')
     @include('collection.section.carousel-preparation')
     @include('collection.section.carousel-opinions')
     @include('collection.section.return')

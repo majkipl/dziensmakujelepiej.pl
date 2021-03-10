@@ -11471,9 +11471,70 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-#brands.product .product-link .brand-box .brand-img {
-  padding: 10px;
+#brands.product .product-link[href*="agdperfekt.pl"] .brand-box {
+  background-image: url("/images/brands/agdperfekt.png");
+}
+#brands.product .product-link[href*="al.to"] .brand-box {
+  background-image: url("/images/brands/alto.png");
+}
+#brands.product .product-link[href*="avans.pl"] .brand-box {
+  background-image: url("/images/brands/avans.png");
+}
+#brands.product .product-link[href*="electro.pl"] .brand-box {
+  background-image: url("/images/brands/electro.png");
+}
+#brands.product .product-link[href*="empik.com"] .brand-box {
+  background-image: url("/images/brands/empik.png");
+}
+#brands.product .product-link[href*="euro.com"] .brand-box {
+  background-image: url("/images/brands/euro.png");
+}
+#brands.product .product-link[href*="kakto.pl"] .brand-box {
+  background-image: url("/images/brands/kakto.png");
+}
+#brands.product .product-link[href*="komputronik.pl"] .brand-box {
+  background-image: url("/images/brands/komputronik.png");
+}
+#brands.product .product-link[href*="maxelektro.pl"] .brand-box {
+  background-image: url("/images/brands/maxelektro.png");
+  background-size: contain;
+}
+#brands.product .product-link[href*="mambonus.pl"] .brand-box {
+  background-image: url("/images/brands/mambonus.png");
+}
+#brands.product .product-link[href*="mediadomek.pl"] .brand-box {
+  background-image: url("/images/brands/mediadomek.png");
+}
+#brands.product .product-link[href*="mediaexpert.pl"] .brand-box {
+  background-image: url("/images/brands/mediaexpert.png");
+}
+#brands.product .product-link[href*="mediamarkt.pl"] .brand-box {
+  background-image: url("/images/brands/mediamarkt.png");
+}
+#brands.product .product-link[href*="morele.net"] .brand-box {
+  background-image: url("/images/brands/morele.png");
+}
+#brands.product .product-link[href*="mycenter.pl"] .brand-box {
+  background-image: url("/images/brands/mycenter.png");
+}
+#brands.product .product-link[href*="neo24.pl"] .brand-box {
+  background-image: url("/images/brands/neo24.png");
+}
+#brands.product .product-link[href*="neonet.pl"] .brand-box {
+  background-image: url("/images/brands/neonet.png");
+}
+#brands.product .product-link[href*="oleole.pl"] .brand-box {
+  background-image: url("/images/brands/oleole.png");
+}
+#brands.product .product-link[href*="sklep.payback.pl"] .brand-box {
+  background-image: url("/images/brands/payback.png");
+}
+#brands.product .product-link[href*="zadowolenie.pl"] .brand-box {
+  background-image: url("/images/brands/zadowolenie.png");
 }
 
 #carousel.product {

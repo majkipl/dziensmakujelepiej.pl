@@ -55,17 +55,7 @@
         </div>
     </section>
 
-    <section id="brands" class="product">
-        <div class="container">
-            <h2 class="title">Gdzie kupić</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <div class="row"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @include('collection.section.brand')
     @include('collection.section.carousel-preparation')
     @include('collection.section.carousel-opinions')
     @include('collection.section.return')

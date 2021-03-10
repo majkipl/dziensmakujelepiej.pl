@@ -103,30 +103,7 @@
         </div>
     </section>
 
-    <section id="brands" class="product">
-        <div class="container">
-            <h2 class="title">Gdzie kupić</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <div class="row">
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.euro.com.pl/zelazka/russell-hobbs-zelazko-one-temperature.bhtml" target="_blank" rel="noopener noreferrer" aria-label="euro">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/euro.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.komputronik.pl/product/554899/russell-hobbs-25090-56-one-temperature.html" target="_blank" rel="noopener noreferrer" aria-label="komputronik">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/komputronik.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.neonet.pl/zelazka/russell-hobbs-25090-56.html" target="_blank" rel="noopener noreferrer" aria-label="neonet">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/neonet.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://mambonus.pl/katalog/agd/zelazko_one_temperature_25090-56_russell_hobbs-2160" target="_blank" rel="noopener noreferrer" aria-label="mambonus">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/mambonus.png') }}" alt="" /></div>
-                            </a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @include('collection.section.brand')
     @include('collection.section.carousel-irons')
     @include('collection.section.carousel-opinions')
     @include('collection.section.return')

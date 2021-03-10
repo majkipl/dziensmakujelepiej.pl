@@ -43,21 +43,7 @@
         </div>
     </section>
 
-    <section id="brands" class="product">
-        <div class="container">
-            <h2 class="title">Gdzie kupić</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <div class="row">
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://maxelektro.pl/sklep/karta-produktu/frytkownica-russell-hobbs-22101-56,67544.html" target="_blank" rel="noopener noreferrer" aria-label="maxelektro">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/maxelektro.png') }}" alt="" /></div>
-                            </a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @include('collection.section.brand')
     @include('collection.section.carousel-preparation')
     @include('collection.section.carousel-opinions')
     @include('collection.section.return')

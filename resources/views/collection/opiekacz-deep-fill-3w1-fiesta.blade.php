@@ -43,60 +43,7 @@
         </div>
     </section>
 
-    <section id="brands" class="product">
-        <div class="container">
-            <h2 class="title">Gdzie kupić</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <div class="row">
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.mediaexpert.pl/agd-male/do-kuchni/opiekacze/opiekacz-do-kanapek-fiesta-3-w-1-24540-56" target="_blank" rel="noopener noreferrer" aria-label="mediaexpert">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/mediaexpert.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.avans.pl/agd-male/do-kuchni/opiekacze/opiekacz-do-kanapek-fiesta-3-w-1-24540-56" target="_blank" rel="noopener noreferrer" aria-label="avans">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/avans.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://selgros24.pl/Sprzet-AGD/Drobne-AGD/Drobne-AGD-do-kuchni/Opiekacze-elektryczne/RUSSELL-HOBBS/OPIEKACZ-3W1-RUSSELL-HOBBS-24540-56-pp143260.html" target="_blank" rel="noopener noreferrer" aria-label="selgros24">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/selgros24.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.electro.pl/agd-male/do-kuchni/opiekacze/opiekacz-do-kanapek-fiesta-3-w-1-24540-56" target="_blank" rel="noopener noreferrer" aria-label="electro">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/electro.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.neonet.pl/opiekacze-do-kanapek/russell-hobbs-deep-fill-3w1-fiesta-24540-56.html" target="_blank" rel="noopener noreferrer" aria-label="neonet">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/neonet.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.neo24.pl/russell-hobbs-deep-fill-3w1-fiesta-24540-56.html" target="_blank" rel="noopener noreferrer" aria-label="neo24">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/neo24.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://sklep.payback.pl/nagrody/opiekacz-3w1-russell-hobbs" target="_blank" rel="noopener noreferrer" aria-label="payback">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/payback.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://mediamarkt.pl/agd-male/opiekacz-russell-hobbs-24540-56-fiesta" target="_blank" rel="noopener noreferrer" aria-label="mediamarkt">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/mediamarkt.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.morele.net/opiekacz-russell-hobbs-24540-56-4046452/" target="_blank" rel="noopener noreferrer" aria-label="morele">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/morele.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.empik.com/opiekacz-russell-hobbs-fiesta-24540-56-750-w,p1218231884,agd-p" target="_blank" rel="noopener noreferrer" aria-label="empik">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/empik.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://maxelektro.pl/sklep/karta-produktu/opiekacz-russell-hobbs-3w1-24540-56,67647.html" target="_blank" rel="noopener noreferrer" aria-label="maxelektro">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/maxelektro.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.zadowolenie.pl/male-agd/do-kuchni/gofrownice-i-sandwicze/russell-hobbs-opiekacz-do-kanapek-fiesta-3-w-1-24540-56" target="_blank" rel="noopener noreferrer" aria-label="zadowolenie">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/zadowolenie.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.kakto.pl/male-agd-do-kuchni/sandwichery-gofrownice-opiekacze-do-kanapek/russell-hobbs-opiekacz-do-kanapek-fiesta-3-w-1-24540-56" target="_blank" rel="noopener noreferrer" aria-label="kakto">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/kakto.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.al.to/p/421328-opiekacz-russell-hobbs-fiesta-24540-56-3w1.html" target="_blank" rel="noopener noreferrer" aria-label="alto">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/alto.png') }}" alt="" /></div>
-                            </a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @include('collection.section.brand')
     @include('collection.section.carousel-preparation')
     @include('collection.section.carousel-opinions')
     @include('collection.section.return')

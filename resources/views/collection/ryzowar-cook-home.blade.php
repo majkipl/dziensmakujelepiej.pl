@@ -55,30 +55,7 @@
         </div>
     </section>
 
-    <section id="brands" class="product">
-        <div class="container">
-            <h2 class="title">Gdzie kupić</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <div class="row">
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.neonet.pl/pozostale/russell-hobbs-ryzowar-19750-56.html" target="_blank" rel="noopener noreferrer" aria-label="neonet">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/neonet.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.neo24.pl/russell-hobbs-ryzowar-19750-56.html" target="_blank" rel="noopener noreferrer" aria-label="neo24">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/neo24.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://mediamarkt.pl/agd-male/garnek-do-ryzu-russell-hobbs-19750-56" target="_blank" rel="noopener noreferrer" aria-label="mediamarkt">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/mediamarkt.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://agdperfekt.pl/5354-ryzowar-russell-hobbs-cookhome-19750-56.html" target="_blank" rel="noopener noreferrer" aria-label="agdperfekt">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/agdperfekt.png') }}" alt="" /></div>
-                            </a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @include('collection.section.brand')
     @include('collection.section.carousel-preparation')
     @include('collection.section.carousel-opinions')
     @include('collection.section.return')

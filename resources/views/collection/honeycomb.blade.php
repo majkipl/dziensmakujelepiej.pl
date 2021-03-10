@@ -172,6 +172,7 @@
         </div>
     </section>
 
+    @include('collection.section.brand')
     @include('collection.section.carousel-opinions')
     @include('home.section.steps')
     @include('common.modal')

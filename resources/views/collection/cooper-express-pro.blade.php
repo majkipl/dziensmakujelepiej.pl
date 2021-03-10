@@ -91,27 +91,7 @@
         </div>
     </section>
 
-    <section id="brands" class="product">
-        <div class="container">
-            <h2 class="title">Gdzie kupić</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <div class="row">
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.mediaexpert.pl/agd-male/prasowanie-i-pielegnacja-ubran/zelazka/zelazko-russell-hobbs-23986-56-copper-express-pro-auto-off" target="_blank" rel="noopener noreferrer" aria-label="mediaexpert">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/mediaexpert.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.avans.pl/agd-male/agd-male-do-domu/zelazka/zelazko-russell-hobbs-23986-56-copper-express-pro-auto-off" target="_blank" rel="noopener noreferrer" aria-label="avans">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/avans.png') }}" alt="" /></div>
-                            </a></div>
-                        <div class="col-6 col-md-4"><a class="product-link" href="https://www.electro.pl/agd-male/agd-male-do-domu/zelazka/zelazko-russell-hobbs-23986-56-copper-express-pro-auto-off" target="_blank" rel="noopener noreferrer" aria-label="electro">
-                                <div class="brand-box"><img class="brand-img" src="{{ asset('images/brands/electro.png') }}" alt="" /></div>
-                            </a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    @include('collection.section.brand')
     @include('collection.section.carousel-irons')
     @include('collection.section.carousel-opinions')
     @include('collection.section.return')
