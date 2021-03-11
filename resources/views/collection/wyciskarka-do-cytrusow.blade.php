@@ -2,11 +2,10 @@
 
 @section('content')
 
-    <section id="top" class="product" style="background-image:url({{ asset('images/products/shadow.png') }}), url({{ asset('images/products/wyciskarka-do-cytrusow.png') }})">
-        <div class="container">
-            <h1 class="title">Wyciskarka do cytrusów</h1>
-        </div><button class="scroll-button" aria-label="scroll-button"><img class="scroll-icon" src="{{ asset('images/svg/scroll.svg') }}" alt="" /></button>
-    </section>
+    @include('collection.section.top', [
+        'title' => 'Wyciskarka do cytrusów',
+        'poster' => asset('images/products/wyciskarka-do-cytrusow.png'),
+    ])
 
     <section id="copy" class="product">
         <div class="container">

@@ -2,12 +2,10 @@
 
 @section('content')
 
-    <section id="top" class="product" style="background-image:url({{ asset('images/products/shadow.png') }}), url({{ asset('images/products/cooper-express.png') }})">
-        <div class="container">
-            <h1 class="title">Cooper Express</h1>
-        </div>
-        <button class="scroll-button" aria-label="scroll-button"><img class="scroll-icon" src="{{ asset('images/svg/scroll.svg') }}" alt="" /></button>
-    </section>
+    @include('collection.section.top', [
+        'title' => 'Cooper Express',
+        'poster' => asset('images/products/cooper-express.png'),
+    ])
 
     <section id="copy" class="product">
         <div class="container">

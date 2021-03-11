@@ -2,13 +2,11 @@
 
 @section('content')
 
-    <section id="top" class="product" style="background-image:url({{ asset('images/products/shadow.png') }}), url({{ asset('images/products/geo-steel.jpg') }})">
-        <video class="video lazy" data-src="{{ asset('mp4/geo-steel.mp4') }}" autoplay="" loop="" muted=""></video>
-        <div class="container">
-            <h1 class="title">Geo Steel</h1>
-        </div>
-        <button class="scroll-button" aria-label="scroll-button"><img class="scroll-icon" src="{{ asset('images/svg/scroll.svg') }}" alt="" /></button>
-    </section>
+    @include('collection.section.top', [
+        'title' => 'Geo Steel',
+        'poster' => asset('images/products/geo-steel.jpg'),
+        'video' => asset('mp4/geo-steel.mp4')
+    ])
 
     <section id="copy" class="product">
         <div class="container">

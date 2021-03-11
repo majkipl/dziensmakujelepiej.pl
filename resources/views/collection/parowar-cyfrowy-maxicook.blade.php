@@ -2,12 +2,10 @@
 
 @section('content')
 
-    <section id="top" class="product" style="background-image:url({{ asset('images/products/shadow.png') }}), url({{ asset('images/products/parowar-cyfrowy-maxicook.jpg') }})">
-        <div class="container">
-            <h1 class="title">Parowar cyfrowy MaxiCook</h1>
-        </div>
-        <button class="scroll-button" aria-label="scroll-button"><img class="scroll-icon" src="{{ asset('images/svg/scroll.svg') }}" alt="" /></button>
-    </section>
+    @include('collection.section.top', [
+        'title' => 'Parowar cyfrowy MaxiCook',
+        'poster' => asset('images/products/parowar-cyfrowy-maxicook.jpg'),
+    ])
 
     <section id="copy" class="product">
         <div class="container">

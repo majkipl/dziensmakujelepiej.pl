@@ -2,12 +2,10 @@
 
 @section('content')
 
-    <section id="top" class="product" style="background-image:url({{ asset('images/products/shadow.png') }}), url({{ asset('images/products/power-steam-ultra.png') }})">
-        <div class="container">
-            <h1 class="title">Power Steam Ultra</h1>
-        </div>
-        <button class="scroll-button" aria-label="scroll-button"><img class="scroll-icon" src="{{ asset('images/svg/scroll.svg') }}" alt="" /></button>
-    </section>
+    @include('collection.section.top', [
+        'title' => 'Power Steam Ultra',
+        'poster' => asset('images/products/power-steam-ultra.png'),
+    ])
 
     <section id="copy" class="product">
         <div class="container">
