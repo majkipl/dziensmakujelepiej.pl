@@ -1,0 +1,36 @@
+#info.thankyou {
+  background-color: $gray;
+  padding: 50px 0;
+
+  @media #{$min-sm} {
+    padding: 75px 0;
+  }
+
+  @media #{$min-md} {
+    padding: 100px 0;
+  }
+
+  @media #{$min-lg} {
+    padding: 120px 0;
+  }
+
+  .content {
+    background-color: $lite-blue;
+    padding: 50px 30px;
+
+    @media #{$min-sm} {
+      padding: 70px;
+    }
+  
+    .text {
+      color: $white;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+
+      &:last-of-type {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

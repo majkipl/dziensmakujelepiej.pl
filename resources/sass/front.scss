@@ -23,6 +23,7 @@
 // Cookies
 @import "./front/cookies";
 
+// Home Page
 @import "./front/home/top";
 @import "./front/home/tabs";
 @import "./front/home/about";
@@ -30,10 +31,12 @@
 @import "./front/home/faq";
 @import "./front/home/contact";
 
+//Warranty page
 @import "./front/warranty/top";
 @import "./front/warranty/info";
 @import "./front/warranty/service";
 
+// Series pages
 @import "./front/series/top";
 @import "./front/series/copy";
 @import "./front/series/product";
@@ -43,3 +46,11 @@
 @import "./front/series/carousel";
 @import "./front/series/opinions";
 @import "./front/series/return";
+
+// Form page
+@import "./front/form/top";
+@import "./front/form/form";
+
+// Thankyou page
+@import "./front/thankyou/top";
+@import "./front/thankyou/info";

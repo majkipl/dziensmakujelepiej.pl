@@ -11831,3 +11831,282 @@ img {
 #return.product .button, #return.product #gallery.product .owl-carousel .owl-nav .owl-next, #gallery.product .owl-carousel .owl-nav #return.product .owl-next {
   margin-top: 40px;
 }
+
+#top.form {
+  position: relative;
+  background: no-repeat center/cover;
+  background-image: url("/images/form/shadow.png"), url("/images/form/bg.jpg");
+  height: 365px;
+}
+#top.form .container {
+  position: relative;
+  top: 200px;
+  transform: translateY(-50%);
+}
+#top.form .container .title {
+  color: #FFFFFF;
+}
+#top.form .container .title::before, #top.form .container .title::after {
+  background-color: #FFFFFF;
+}
+
+#form.form {
+  background-color: #F2F2F2;
+  padding: 50px 0;
+}
+@media (min-width: 576px) {
+  #form.form {
+    padding: 75px 0;
+  }
+}
+@media (min-width: 768px) {
+  #form.form {
+    padding: 100px 0;
+  }
+}
+@media (min-width: 992px) {
+  #form.form {
+    padding: 120px 0;
+  }
+}
+#form.form .app-form .field {
+  margin-bottom: 30px;
+}
+#form.form .app-form .field .error-post {
+  color: #D41317;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+#form.form .app-form .input {
+  background-color: transparent;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #666666;
+  border-radius: 20px;
+  color: #666666;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+#form.form .app-form .input::-moz-placeholder {
+  color: #B3B3B3;
+  opacity: 1;
+}
+#form.form .app-form .input::placeholder {
+  color: #B3B3B3;
+  opacity: 1;
+}
+#form.form .app-form .input:focus {
+  outline: none;
+}
+#form.form .app-form .input:focus-visible {
+  border-color: #0657A5;
+  color: #0657A5;
+}
+#form.form .app-form .input.message {
+  height: 270px;
+}
+#form.form .app-form .input.select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: no-repeat right 15px center/auto;
+  background-image: url("/images/svg/form/down.svg"), linear-gradient(90deg, transparent calc(100% - 30px), #666666 calc(100% - 30px), #666666 calc(100% - 28px), transparent calc(100% - 28px));
+  padding-right: 50px;
+  text-overflow: ellipsis;
+}
+#form.form .app-form .input.select:focus-visible {
+  background-image: url("/images/svg/form/up.svg"), linear-gradient(90deg, transparent calc(100% - 30px), #0657A5 calc(100% - 30px), #0657A5 calc(100% - 28px), transparent calc(100% - 28px));
+}
+#form.form .app-form .input.hidden {
+  display: none;
+}
+#form.form .app-form .file-row {
+  margin-bottom: 25px;
+}
+#form.form .app-form .file-row .file-label {
+  background-color: #FFFFFF;
+  height: 310px;
+  margin: 0 0 25px;
+  align-items: center;
+  justify-content: center;
+}
+#form.form .app-form .file-row .file-label .file-icon {
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+#form.form .app-form .file-row .file-label .file-text {
+  margin-bottom: 15px;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+}
+#form.form .app-form .file-row .file-label .file-input {
+  display: none;
+}
+#form.form .app-form .file-row .file-label .file-button {
+  margin-bottom: 40px;
+}
+#form.form .app-form .file-row .thumbs {
+  border: 2px solid #666666;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#form.form .app-form .file-row .file-img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top;
+     object-position: top;
+}
+#form.form .app-form .file-row .ajax-file-upload-filename {
+  display: none;
+}
+#form.form .app-form .file-row .uploads {
+  margin-bottom: 15px;
+}
+#form.form .app-form .file-row .uploads .uploads-icon {
+  margin-bottom: 15px;
+}
+#form.form .app-form .label {
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+}
+#form.form .app-form .label .checkbox {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #666666;
+  border-radius: 50%;
+}
+#form.form .app-form .label .checkbox:focus {
+  outline: none;
+}
+#form.form .app-form .label .checkbox:focus-visible {
+  border-color: #0657A5;
+}
+#form.form .app-form .label .checkbox:checked {
+  background-image: radial-gradient(#0657A5 7.5px, #FFFFFF 7.5px);
+}
+#form.form .app-form .label .checkbox-text {
+  margin-left: -15px;
+  padding-left: 30px;
+  color: #666666;
+  font-size: 13px;
+  line-height: 16px;
+}
+#form.form .app-form .info {
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  padding: 30px 0;
+}
+#form.form .app-form .info img {
+  margin-bottom: 25px;
+}
+#form.form .app-form .uploads-d-none {
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#form.form .app-form .whence-other {
+  display: none;
+}
+
+#top.thankyou {
+  position: relative;
+  background: no-repeat center/cover;
+  background-image: url("/images/form/shadow.png"), url("/images/form/bg.jpg");
+  height: 365px;
+}
+#top.thankyou .container {
+  position: relative;
+  top: 200px;
+  transform: translateY(-50%);
+}
+#top.thankyou .container .title {
+  color: #FFFFFF;
+}
+#top.thankyou .container .title::before, #top.thankyou .container .title::after {
+  background-color: #FFFFFF;
+}
+#top.thankyou .mail-box {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  width: 90px;
+  height: 45px;
+}
+#top.thankyou .mail-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color: #F2F2F2;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  z-index: -1;
+}
+#top.thankyou .mail-box .mail-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#info.thankyou {
+  background-color: #F2F2F2;
+  padding: 50px 0;
+}
+@media (min-width: 576px) {
+  #info.thankyou {
+    padding: 75px 0;
+  }
+}
+@media (min-width: 768px) {
+  #info.thankyou {
+    padding: 100px 0;
+  }
+}
+@media (min-width: 992px) {
+  #info.thankyou {
+    padding: 120px 0;
+  }
+}
+#info.thankyou .content {
+  background-color: #0657A5;
+  padding: 50px 30px;
+}
+@media (min-width: 576px) {
+  #info.thankyou .content {
+    padding: 70px;
+  }
+}
+#info.thankyou .content .text {
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+}
+#info.thankyou .content .text:last-of-type {
+  margin-bottom: 40px;
+}

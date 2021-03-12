@@ -1,0 +1,51 @@
+#top.thankyou {
+    position: relative;
+    background: no-repeat center / cover;
+    background-image: url("/images/form/shadow.png"), url("/images/form/bg.jpg");
+    height: 365px;
+
+    .container {
+        position: relative;
+        top: 200px;
+        transform: translateY(-50%);
+
+        .title {
+            color: $white;
+
+            &::before,
+            &::after {
+                background-color: $white;
+            }
+        }
+    }
+
+    .mail-box {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $transparent;
+        width: 90px;
+        height: 45px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            background-color: $gray;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .mail-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

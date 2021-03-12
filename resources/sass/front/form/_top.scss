@@ -1,0 +1,21 @@
+#top.form {
+    position: relative;
+    background: no-repeat center / cover;
+    background-image: url("/images/form/shadow.png"), url("/images/form/bg.jpg");
+    height: 365px;
+
+    .container {
+        position: relative;
+        top: 200px;
+        transform: translateY(-50%);
+
+        .title {
+            color: $white;
+
+            &::before,
+            &::after {
+                background-color: $white;
+            }
+        }
+    }
+}

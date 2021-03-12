@@ -30,6 +30,7 @@ $(window).scroll(() => {
 
 const starter = {
     _var: {
+        error: []
     },
 
     main: {
@@ -52,10 +53,64 @@ const starter = {
                 $(this).parent().siblings().find(".dropdown-menu").hide();
                 $(this).next(".dropdown-menu").toggle();
             });
+
+            $(document).on("click", "button.button-uploads", function () {
+                $(this).closest('.field').find("input[type=file]").trigger("click");
+            });
+
+            $(document).on('click', '#form .submit', function () {
+                $('#form form#save').submit();
+                return false;
+            });
+
+            $(document).on('click', '#form input[name=legal_all]', function () {
+                this.checked === true
+                    ? $(".checkbox").each(function () {
+                        this.checked = true;
+                    })
+                    : $(".checkbox").each(function () {
+                        this.checked = false;
+                    });
+            });
         },
 
         onChange: function () {
+            $(document).on('change', '.input, .textarea, .checkbox, .file', function (event) {
+                const item = $(this);
+                const name = $(this).attr('name');
+                const valid = starter.form.validate(item, event);
 
+                if (valid !== true) {
+                    $(`.error-${name}`).text(valid).closest('.field').addClass('has-error');
+                    starter._var.error[name] = valid;
+                } else {
+                    $(`.error-${name}`).text('').closest('.field').removeClass('has-error');
+                    delete starter._var.error[name];
+
+                    if (item.hasClass('upload-file')) {
+                        const fileUpload = item[0].files[0];
+                        const fieldId = item.attr('id');
+                        const errorDiv = $(`.error-${fieldId}`);
+
+                        errorDiv.text('');
+
+                        if (fileUpload) {
+                            let reader = new FileReader();
+
+                            reader.onload = function (event) {
+                                if (item.hasClass('upload-image')) {
+                                    $(`#${fieldId}_thumb`).attr('src', event.target.result).parent().removeClass('hidden').next().addClass('hidden');
+                                }
+                            }
+                            reader.readAsDataURL(fileUpload);
+                        }
+                    }
+                }
+            });
+
+            $(document).on('change', 'select#whence', function (event) {
+                $(this).find('option:selected').val() === 'inne' ? $('.whence-other').show() : $('.whence-other').hide();
+            });
         },
 
         onInputs: function () {
@@ -63,7 +118,51 @@ const starter = {
         },
 
         onSubmit: function () {
+            $(document).on('submit', '#form form', function () {
+                // $('.input, .textarea, .checkbox, .file').trigger('change');
 
+                console.log(starter._var.error);
+
+                if (Object.keys(starter._var.error).length === 0) {
+                    const fields = starter.form.getFields($(this).closest('form'));
+                    const url = $(this).closest('form').attr('action');
+                    const formData = new FormData();
+
+                    for (const field in fields) {
+                        formData.append(field, fields[field]);
+                    }
+
+                    axios({
+                        method: 'post', url: url, headers: {
+                            'content-type': 'multipart/form-data',
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        }, data: formData,
+                    }).then(function (response) {
+                        window.location = response.data.results.url;
+                    }).catch(function (error) {
+                        $(`.error-post`).text('');
+                        if (error.response) {
+                            Object.keys(error.response.data.errors).map((item) => {
+                                $(`.error-${item}`).text(error.response.data.errors[item][0]);
+                            });
+                        } else if (error.request) {
+                            console.log(error.request);
+                        } else {
+                            console.log('Error', error.message);
+                        }
+                    });
+                } else {
+                    $('.error-post').text('');
+                    for (let key in starter._var.error) {
+                        if (starter._var.error.hasOwnProperty(key)) {
+                            let value = starter._var.error[key];
+                            $('.error-' + key).text(value);
+                        }
+                    }
+                }
+
+                return false;
+            });
         },
 
         onFocus: function () {
@@ -86,16 +185,180 @@ const starter = {
         },
 
         onShowBsCollapse: function () {
-            $(".navbar-collapse").on("shown.bs.collapse", function () {
+            const navbarCollapse = $(".navbar-collapse");
+            navbarCollapse.on("shown.bs.collapse", function () {
                 $(".navbar-toggler").blur();
             });
-            $(".navbar-collapse").on("hidden.bs.collapse", function () {
+            navbarCollapse.on("hidden.bs.collapse", function () {
                 $(".navbar-toggler").blur();
             });
         }
     },
 
     form: {
+        getFields: function ($form) {
+            const inputs = $form.find('.input');
+            const textareas = $form.find('.textarea');
+            const checkboxes = $form.find('.checkbox');
+            const files = $form.find('.file');
+            const fields = {};
+
+            $.each(inputs, function (index, item) {
+                fields[$(item).attr('name')] = $(item).val();
+            });
+
+            $.each(textareas, function (index, item) {
+                fields[$(item).attr('name')] = $(item).val();
+            });
+
+            $.each(checkboxes, function (index, item) {
+                if ($(item).prop('checked')) {
+                    fields[$(item).attr('name')] = $(item).val();
+                }
+            });
+
+            $.each(files, function (index, item) {
+                if (item.files[0]) {
+                    fields[$(item).attr('name')] = item.files[0];
+                }
+            })
+
+            fields['_token'] = $form.find('input[name=_token]').val();
+
+            return fields;
+        },
+
+        validate: function (item, event) {
+            const value = (item.hasClass('select') && item.find('option:selected').hasClass('selected')) ? '' : item.val().trim();
+            const name = item.attr('name');
+
+            const isOtherWhence = $('select#whence option:selected').val() === 'inne' ? 1 : 0;
+
+            switch (name) {
+                case 'name':
+                    return starter.form.validator.isName(value, 'Imię i nazwisko');
+                case 'street':
+                    return starter.form.validator.isContent(value, 'Adres');
+                case 'flat':
+                    return starter.form.validator.isFlat(value, 'Numer mieszkania');
+                case 'city':
+                    return starter.form.validator.isName(value, 'Miejscowość');
+                case 'zip':
+                    return starter.form.validator.isZip(value, 'Miejscowość');
+                case 'phone':
+                    return starter.form.validator.isPhone(value, 'Telefon');
+                case 'email':
+                    return starter.form.validator.isEmail(value, 'E-mail');
+                case 'purchase':
+                    return starter.form.validator.isRequire(value, 'to');
+                case 'whence':
+                    return starter.form.validator.isRequire(value, 'to');
+                case 'whence_other':
+                    return isOtherWhence ? starter.form.validator.isName(value, 'to') : true;
+                case 'img_receipt':
+                    return starter.form.validator.isFile(item, 'Zdjęcie paragonu');
+                case 'img_ean':
+                    return starter.form.validator.isFile(item, 'Zdjęcie kodu EAN');
+                case 'img_box':
+                    return starter.form.validator.isFile(item, 'Zdjęcie pudełka');
+                case 'legal_1':
+                case 'legal_2':
+                case 'legal_3':
+                    return starter.form.validator.isLegal(item);
+                default:
+                    return true;
+            }
+        },
+
+        validator: {
+            isName: (value, name) => {
+                if (value === "") {
+                    return `Pole ${name} jest wymagane.`;
+                } else if (value.length < 3 || value.length > 128) {
+                    return `Pole ${name} musi mieć od 3 do 128 znaków.`;
+                } else if (!/^[\p{L}\s-]+$/u.test(value)) {
+                    return `Pole ${name} może zawierać tylko litery.`;
+                } else {
+                    return true;
+                }
+            },
+            isZip: (value, name) => {
+                if (value === "") {
+                    return `Pole ${name} jest wymagane.`;
+                } else if (!/^[0-9]{2}-[0-9]{3}$/.test(value)) {
+                    return 'Wprowadź poprawny kod pocztowy.';
+                } else {
+                    return true;
+                }
+            },
+            isPhone: (value, name) => {
+                if (value === "") {
+                    return `Pole ${name} jest wymagane.`;
+                } else if (!/^\+48(\s)?([1-9]\d{8}|[1-9]\d{2}\s\d{3}\s\d{3}|[1-9]\d{1}\s\d{3}\s\d{2}\s\d{2}|[1-9]\d{1}\s\d{2}\s\d{3}\s\d{2}|[1-9]\d{1}\s\d{2}\s\d{2}\s\d{3}|[1-9]\d{1}\s\d{4}\s\d{2}|[1-9]\d{2}\s\d{2}\s\d{2}\s\d{2}|[1-9]\d{2}\s\d{3}\s\d{2}|[1-9]\d{2}\s\d{4})$/.test(value)) {
+                    return 'Wprowadź poprawny numer telefonu.';
+                } else {
+                    return true;
+                }
+            },
+            isEmail: (value, name) => {
+                if (value === "") {
+                    return `Pole ${name} jest wymagane.`;
+                } else if (value.length > 255) {
+                    return `Pole ${name} może mieć maksymalnie 255 znaków.`;
+                } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+                    return 'Wprowadź poprawny adres email.';
+                } else {
+                    return true;
+                }
+            },
+            isFlat: (value, name) => {
+                if (value === "") {
+                    return `Pole ${name} jest wymagane.`;
+                } else if (value.length > 16) {
+                    return `Pole ${name} może mieć maksymalnie 255 znaków.`;
+                } else {
+                    return true;
+                }
+            },
+            isLegal: (item) => {
+                if (item.val() === "") {
+                    return `Pole jest wymagane.`;
+                } else if (!item.prop('checked')) {
+                    return `Pole jest wymagane.`;
+                } else {
+                    return true;
+                }
+            },
+            isFile: (file, name) => {
+                const extension = file[0]?.files[0]?.name.split('.').pop().toLowerCase();
+                if (file[0].files.length === 0) {
+                    return `Pole ${name} jest wymagane.`;
+                } else if (file[0].files[0].size > 4 * 1024 * 1024) {
+                    return `Rozmiar pliku nie może przekraczać 4 MB`;
+                } else if (['jpg', 'jpeg', 'png'].indexOf(extension) === -1) {
+                    return `Można wybrać tylko pliki graficzne JPG, JPEG lub PNG`;
+                } else {
+                    return true;
+                }
+            },
+            isContent: (value, name) => {
+                if (value === "") {
+                    return `Pole ${name} jest wymagane.`;
+                } else if (value.length > 128) {
+                    return `Pole ${name} może mieć maksymalnie 128 znaków.`;
+                } else {
+                    return true;
+                }
+            },
+            isRequire: (value, name) => {
+                if (value === "") {
+                    return `Pole ${name} jest wymagane.`;
+                } else {
+                    return true;
+                }
+            },
+        },
+
         styled: function () {
             $(".select").find('option[value=""]:checked').parent().addClass("empty");
         }
