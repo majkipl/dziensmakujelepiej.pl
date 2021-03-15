@@ -13,37 +13,155 @@
     @media #{$min-lg} {
         padding: 120px 0;
     }
+}
 
-    .app-form {
-        .field {
-            margin-bottom: 30px;
+form {
+    .field {
+        margin-bottom: 30px;
 
-            .error-post {
-                color: $red;
-                font-weight: 700;
-                font-size: 14px;
-                line-height: 17px;
-                text-align: center;
-                letter-spacing: 1px;
+        .error-post {
+            color: $red;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+    }
+
+    .input {
+        background-color: $transparent;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: 2px solid $border;
+        border-radius: 20px;
+        color: $border;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+
+        &::placeholder {
+            color: $placeholder;
+            opacity: 1;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:focus-visible {
+            border-color: $lite-blue;
+            color: $lite-blue;
+        }
+
+        &.message {
+            height: 270px;
+        }
+
+        &.select {
+            appearance: none;
+            background: no-repeat right 15px center / auto;
+            background-image: url("/images/svg/form/down.svg"),
+            linear-gradient(
+                    90deg,
+                    $transparent calc(100% - 30px),
+                    $border calc(100% - 30px),
+                    $border calc(100% - 28px),
+                    $transparent calc(100% - 28px)
+            );
+            padding-right: 50px;
+            text-overflow: ellipsis;
+
+            &:focus-visible {
+                background-image: url("/images/svg/form/up.svg"),
+                linear-gradient(
+                        90deg,
+                        $transparent calc(100% - 30px),
+                        $lite-blue calc(100% - 30px),
+                        $lite-blue calc(100% - 28px),
+                        $transparent calc(100% - 28px)
+                );
             }
         }
 
-        .input {
-            background-color: $transparent;
-            display: block;
-            width: 100%;
-            padding: 10px;
+        &.hidden {
+            display: none;
+        }
+    }
+
+    .file-row {
+        margin-bottom: 25px;
+
+        .file-label {
+            background-color: $white;
+            height: 310px;
+            margin: 0 0 25px;
+            align-items: center;
+            justify-content: center;
+
+            .file-icon {
+                margin-top: 40px;
+                margin-bottom: 15px;
+            }
+
+            .file-text {
+                margin-bottom: 15px;
+                font-size: 13px;
+                line-height: 16px;
+                text-align: center;
+            }
+
+            .file-input {
+                display: none;
+            }
+
+            .file-button {
+                margin-bottom: 40px;
+            }
+        }
+
+        .thumbs {
             border: 2px solid $border;
             border-radius: 20px;
-            color: $border;
-            font-size: 18px;
-            line-height: 21px;
-            text-align: center;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
 
-            &::placeholder {
-                color: $placeholder;
-                opacity: 1;
+        .file-img {
+            max-width: 100%;
+            object-fit: contain;
+            object-position: top;
+        }
+
+        .ajax-file-upload-filename {
+            display: none;
+        }
+
+        .uploads {
+            margin-bottom: 15px;
+
+            .uploads-icon {
+                margin-bottom: 15px;
             }
+        }
+    }
+
+    .label {
+        flex-wrap: nowrap;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: stretch;
+        width: 100%;
+
+        .checkbox {
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border: 2px solid $border;
+            border-radius: 50%;
 
             &:focus {
                 outline: none;
@@ -51,164 +169,46 @@
 
             &:focus-visible {
                 border-color: $lite-blue;
-                color: $lite-blue;
             }
 
-            &.message {
-                height: 270px;
-            }
-
-            &.select {
-                appearance: none;
-                background: no-repeat right 15px center / auto;
-                background-image: url("/images/svg/form/down.svg"),
-                    linear-gradient(
-                        90deg,
-                        $transparent calc(100% - 30px),
-                        $border calc(100% - 30px),
-                        $border calc(100% - 28px),
-                        $transparent calc(100% - 28px)
-                    );
-                padding-right: 50px;
-                text-overflow: ellipsis;
-
-                &:focus-visible {
-                    background-image: url("/images/svg/form/up.svg"),
-                        linear-gradient(
-                            90deg,
-                            $transparent calc(100% - 30px),
-                            $lite-blue calc(100% - 30px),
-                            $lite-blue calc(100% - 28px),
-                            $transparent calc(100% - 28px)
-                        );
-                }
-            }
-
-            &.hidden {
-                display: none;
-            }
-        }
-
-        .file-row {
-            margin-bottom: 25px;
-
-            .file-label {
-                background-color: $white;
-                height: 310px;
-                margin: 0 0 25px;
-                align-items: center;
-                justify-content: center;
-
-                .file-icon {
-                    margin-top: 40px;
-                    margin-bottom: 15px;
-                }
-
-                .file-text {
-                    margin-bottom: 15px;
-                    font-size: 13px;
-                    line-height: 16px;
-                    text-align: center;
-                }
-
-                .file-input {
-                    display: none;
-                }
-
-                .file-button {
-                    margin-bottom: 40px;
-                }
-            }
-
-            .thumbs {
-                border: 2px solid $border;
-                border-radius: 20px;
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-            }
-
-            .file-img {
-                max-width: 100%;
-                object-fit: contain;
-                object-position: top;
-            }
-
-            .ajax-file-upload-filename {
-                display: none;
-            }
-
-            .uploads {
-                margin-bottom: 15px;
-
-                .uploads-icon {
-                    margin-bottom: 15px;
-                }
-            }
-        }
-
-        .label {
-            flex-wrap: nowrap;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: stretch;
-            width: 100%;
-
-            .checkbox {
-                appearance: none;
-                width: 25px;
-                height: 25px;
-                border: 2px solid $border;
-                border-radius: 50%;
-
-                &:focus {
-                    outline: none;
-                }
-
-                &:focus-visible {
-                    border-color: $lite-blue;
-                }
-
-                &:checked {
-                    background-image: radial-gradient(
+            &:checked {
+                background-image: radial-gradient(
                         $lite-blue 7.5px,
                         $white 7.5px
-                    );
-                }
-            }
-
-            .checkbox-text {
-                margin-left: -15px;
-                padding-left: 30px;
-                color: $border;
-                font-size: 13px;
-                line-height: 16px;
+                );
             }
         }
 
-        .info {
-            background-color: $white;
-            width: 100%;
-            height: 100%;
-            padding: 30px 0;
-
-            img {
-                margin-bottom: 25px;
-            }
+        .checkbox-text {
+            margin-left: -15px;
+            padding-left: 30px;
+            color: $border;
+            font-size: 13px;
+            line-height: 16px;
         }
+    }
 
-        .uploads-d-none {
-            overflow: hidden;
-            width: 0;
-            height: 0;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
+    .info {
+        background-color: $white;
+        width: 100%;
+        height: 100%;
+        padding: 30px 0;
 
-        .whence-other {
-            display: none;
+        img {
+            margin-bottom: 25px;
         }
+    }
+
+    .uploads-d-none {
+        overflow: hidden;
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .whence-other {
+        display: none;
     }
 }

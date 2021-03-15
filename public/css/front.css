@@ -11869,10 +11869,11 @@ img {
     padding: 120px 0;
   }
 }
-#form.form .app-form .field {
+
+form .field {
   margin-bottom: 30px;
 }
-#form.form .app-form .field .error-post {
+form .field .error-post {
   color: #D41317;
   font-weight: 700;
   font-size: 14px;
@@ -11880,7 +11881,7 @@ img {
   text-align: center;
   letter-spacing: 1px;
 }
-#form.form .app-form .input {
+form .input {
   background-color: transparent;
   display: block;
   width: 100%;
@@ -11892,25 +11893,25 @@ img {
   line-height: 21px;
   text-align: center;
 }
-#form.form .app-form .input::-moz-placeholder {
+form .input::-moz-placeholder {
   color: #B3B3B3;
   opacity: 1;
 }
-#form.form .app-form .input::placeholder {
+form .input::placeholder {
   color: #B3B3B3;
   opacity: 1;
 }
-#form.form .app-form .input:focus {
+form .input:focus {
   outline: none;
 }
-#form.form .app-form .input:focus-visible {
+form .input:focus-visible {
   border-color: #0657A5;
   color: #0657A5;
 }
-#form.form .app-form .input.message {
+form .input.message {
   height: 270px;
 }
-#form.form .app-form .input.select {
+form .input.select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -11919,62 +11920,62 @@ img {
   padding-right: 50px;
   text-overflow: ellipsis;
 }
-#form.form .app-form .input.select:focus-visible {
+form .input.select:focus-visible {
   background-image: url("/images/svg/form/up.svg"), linear-gradient(90deg, transparent calc(100% - 30px), #0657A5 calc(100% - 30px), #0657A5 calc(100% - 28px), transparent calc(100% - 28px));
 }
-#form.form .app-form .input.hidden {
+form .input.hidden {
   display: none;
 }
-#form.form .app-form .file-row {
+form .file-row {
   margin-bottom: 25px;
 }
-#form.form .app-form .file-row .file-label {
+form .file-row .file-label {
   background-color: #FFFFFF;
   height: 310px;
   margin: 0 0 25px;
   align-items: center;
   justify-content: center;
 }
-#form.form .app-form .file-row .file-label .file-icon {
+form .file-row .file-label .file-icon {
   margin-top: 40px;
   margin-bottom: 15px;
 }
-#form.form .app-form .file-row .file-label .file-text {
+form .file-row .file-label .file-text {
   margin-bottom: 15px;
   font-size: 13px;
   line-height: 16px;
   text-align: center;
 }
-#form.form .app-form .file-row .file-label .file-input {
+form .file-row .file-label .file-input {
   display: none;
 }
-#form.form .app-form .file-row .file-label .file-button {
+form .file-row .file-label .file-button {
   margin-bottom: 40px;
 }
-#form.form .app-form .file-row .thumbs {
+form .file-row .thumbs {
   border: 2px solid #666666;
   border-radius: 20px;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-#form.form .app-form .file-row .file-img {
+form .file-row .file-img {
   max-width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: top;
      object-position: top;
 }
-#form.form .app-form .file-row .ajax-file-upload-filename {
+form .file-row .ajax-file-upload-filename {
   display: none;
 }
-#form.form .app-form .file-row .uploads {
+form .file-row .uploads {
   margin-bottom: 15px;
 }
-#form.form .app-form .file-row .uploads .uploads-icon {
+form .file-row .uploads .uploads-icon {
   margin-bottom: 15px;
 }
-#form.form .app-form .label {
+form .label {
   flex-wrap: nowrap;
   display: flex;
   flex-direction: row;
@@ -11982,7 +11983,7 @@ img {
   align-items: stretch;
   width: 100%;
 }
-#form.form .app-form .label .checkbox {
+form .label .checkbox {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -11991,32 +11992,32 @@ img {
   border: 2px solid #666666;
   border-radius: 50%;
 }
-#form.form .app-form .label .checkbox:focus {
+form .label .checkbox:focus {
   outline: none;
 }
-#form.form .app-form .label .checkbox:focus-visible {
+form .label .checkbox:focus-visible {
   border-color: #0657A5;
 }
-#form.form .app-form .label .checkbox:checked {
+form .label .checkbox:checked {
   background-image: radial-gradient(#0657A5 7.5px, #FFFFFF 7.5px);
 }
-#form.form .app-form .label .checkbox-text {
+form .label .checkbox-text {
   margin-left: -15px;
   padding-left: 30px;
   color: #666666;
   font-size: 13px;
   line-height: 16px;
 }
-#form.form .app-form .info {
+form .info {
   background-color: #FFFFFF;
   width: 100%;
   height: 100%;
   padding: 30px 0;
 }
-#form.form .app-form .info img {
+form .info img {
   margin-bottom: 25px;
 }
-#form.form .app-form .uploads-d-none {
+form .uploads-d-none {
   overflow: hidden;
   width: 0;
   height: 0;
@@ -12024,7 +12025,7 @@ img {
   top: 0;
   left: 0;
 }
-#form.form .app-form .whence-other {
+form .whence-other {
   display: none;
 }
 

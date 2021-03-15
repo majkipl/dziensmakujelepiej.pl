@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\CollectionController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ThxController;
 use App\Http\Controllers\WarrantyController;
@@ -51,6 +52,7 @@ Route::get('/wyciskarka-do-cytrusow', [CollectionController::class, 'wyciskarkaD
 Route::get('/frytownica-cyclofry-plus', [CollectionController::class, 'frytownicaCyclofryPlus'])->name('front.collection.frytownica-cyclofry-plus');
 Route::get('/blender-kielichowy-sensigence', [CollectionController::class, 'blenderKielichowySensigence'])->name('front.collection.blender-kielichowy-sensigence');
 Route::get('/blender-reczny-desire', [CollectionController::class, 'blenderRecznyDesire'])->name('front.collection.blender-reczny-desire');
+Route::post('/kontakt/wyslij', [ContactController::class, 'send'])->name('front.contact.send');
 Route::get('/formularz', [ApplicationController::class, 'form'])->name('front.application.form');
 Route::post('/formularz/zapisz', [ApplicationController::class, 'store'])->name('front.application.save');
 Route::get('/formularz/podziekowania', [ThxController::class, 'form'])->name('front.thx.form');

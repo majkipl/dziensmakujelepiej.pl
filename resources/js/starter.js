@@ -72,6 +72,11 @@ const starter = {
                         this.checked = false;
                     });
             });
+
+            $(document).on('click', '#contact a.send', function () {
+                $(this).closest('form').submit();
+                return false;
+            });
         },
 
         onChange: function () {
@@ -118,10 +123,52 @@ const starter = {
         },
 
         onSubmit: function () {
-            $(document).on('submit', '#form form', function () {
+            $(document).on('submit', '#contact form', function () {
                 // $('.input, .textarea, .checkbox, .file').trigger('change');
 
                 console.log(starter._var.error);
+
+                if (Object.keys(starter._var.error).length === 0) {
+
+                    const fields = starter.form.getFields($(this).closest('form'));
+                    const url = $(this).closest('form').attr('action');
+
+                    axios({
+                        method: 'post', url: url, headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        }, data: fields,
+                    }).then(function (response) {
+                        $('#contact h3').html(response.data.results.message);
+                        $('#contact form').hide();
+                    }).catch(function (error) {
+                        $(`.error-post`).text('');
+
+                        if (error.response) {
+                            Object.keys(error.response.data.errors).map((item) => {
+                                $(`.error-${item}`).text(error.response.data.errors[item][0]);
+                            });
+                        } else if (error.request) {
+                            console.log(error.request);
+                        } else {
+                            console.log('Error', error.message);
+                        }
+                    });
+
+                } else {
+                    $('.error-post').text('');
+                    for (let key in starter._var.error) {
+                        if (starter._var.error.hasOwnProperty(key)) {
+                            let value = starter._var.error[key];
+                            $('.error-' + key).text(value).closest('.field').addClass('has-error');
+                        }
+                    }
+                }
+
+                return false;
+            });
+
+            $(document).on('submit', '#form form', function () {
+                $('.input, .textarea, .checkbox, .file').trigger('change');
 
                 if (Object.keys(starter._var.error).length === 0) {
                     const fields = starter.form.getFields($(this).closest('form'));
@@ -261,6 +308,8 @@ const starter = {
                     return starter.form.validator.isFile(item, 'Zdjęcie kodu EAN');
                 case 'img_box':
                     return starter.form.validator.isFile(item, 'Zdjęcie pudełka');
+                case 'message':
+                    return starter.form.validator.isMessage(value, 'Treść wiadomości');
                 case 'legal_1':
                 case 'legal_2':
                 case 'legal_3':
@@ -353,6 +402,15 @@ const starter = {
             isRequire: (value, name) => {
                 if (value === "") {
                     return `Pole ${name} jest wymagane.`;
+                } else {
+                    return true;
+                }
+            },
+            isMessage: (value, name) => {
+                if (value === "") {
+                    return `Pole ${name} jest wymagane.`;
+                } else if (value.length < 3 || value.length > 4096) {
+                    return `Pole ${name} musi mieć od 3 do 4096 znaków.`;
                 } else {
                     return true;
                 }

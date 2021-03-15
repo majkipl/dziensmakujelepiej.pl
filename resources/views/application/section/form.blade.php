@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10 col-xl-8">
-                <form class="app-form" method="post" id="save" action="{{ route('front.application.save') }}">
+                <form method="post" id="save" action="{{ route('front.application.save') }}">
                     @csrf
                     <x-form.input.text name="name" placeholder="Imię i nazwisko" required max="128" />
                     <x-form.input.email name="email" placeholder="E-mail" required max="128" />

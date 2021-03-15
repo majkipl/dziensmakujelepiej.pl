@@ -2199,6 +2199,10 @@ var starter = {
           this.checked = false;
         });
       });
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '#contact a.send', function () {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('form').submit();
+        return false;
+      });
     },
     onChange: function onChange() {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('change', '.input, .textarea, .checkbox, .file', function (event) {
@@ -2234,10 +2238,48 @@ var starter = {
     },
     onInputs: function onInputs() {},
     onSubmit: function onSubmit() {
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('submit', '#form form', function () {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('submit', '#contact form', function () {
         // $('.input, .textarea, .checkbox, .file').trigger('change');
 
         console.log(starter._var.error);
+        if (Object.keys(starter._var.error).length === 0) {
+          var fields = starter.form.getFields(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('form'));
+          var url = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('form').attr('action');
+          axios({
+            method: 'post',
+            url: url,
+            headers: {
+              'X-CSRF-TOKEN': jquery__WEBPACK_IMPORTED_MODULE_0___default()('meta[name="csrf-token"]').attr('content')
+            },
+            data: fields
+          }).then(function (response) {
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()('#contact h3').html(response.data.results.message);
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()('#contact form').hide();
+          })["catch"](function (error) {
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()(".error-post").text('');
+            if (error.response) {
+              Object.keys(error.response.data.errors).map(function (item) {
+                jquery__WEBPACK_IMPORTED_MODULE_0___default()(".error-".concat(item)).text(error.response.data.errors[item][0]);
+              });
+            } else if (error.request) {
+              console.log(error.request);
+            } else {
+              console.log('Error', error.message);
+            }
+          });
+        } else {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('.error-post').text('');
+          for (var key in starter._var.error) {
+            if (starter._var.error.hasOwnProperty(key)) {
+              var value = starter._var.error[key];
+              jquery__WEBPACK_IMPORTED_MODULE_0___default()('.error-' + key).text(value).closest('.field').addClass('has-error');
+            }
+          }
+        }
+        return false;
+      });
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('submit', '#form form', function () {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.input, .textarea, .checkbox, .file').trigger('change');
         if (Object.keys(starter._var.error).length === 0) {
           var fields = starter.form.getFields(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('form'));
           var url = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('form').attr('action');
@@ -2363,6 +2405,8 @@ var starter = {
           return starter.form.validator.isFile(item, 'Zdjęcie kodu EAN');
         case 'img_box':
           return starter.form.validator.isFile(item, 'Zdjęcie pudełka');
+        case 'message':
+          return starter.form.validator.isMessage(value, 'Treść wiadomości');
         case 'legal_1':
         case 'legal_2':
         case 'legal_3':
@@ -2455,6 +2499,15 @@ var starter = {
       isRequire: function isRequire(value, name) {
         if (value === "") {
           return "Pole ".concat(name, " jest wymagane.");
+        } else {
+          return true;
+        }
+      },
+      isMessage: function isMessage(value, name) {
+        if (value === "") {
+          return "Pole ".concat(name, " jest wymagane.");
+        } else if (value.length < 3 || value.length > 4096) {
+          return "Pole ".concat(name, " musi mie\u0107 od 3 do 4096 znak\xF3w.");
         } else {
           return true;
         }

@@ -1,4 +1,4 @@
-<div class="row field {{ $classWrapper ?? '' }}">
+<div class="field {{ $classWrapper ?? '' }}">
     <label class="label {{ $class ?? '' }}">
         <input type="checkbox"
                class="col-auto checkbox"
