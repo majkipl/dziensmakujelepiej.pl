@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Collection;
+use App\Models\Product;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class LinkFactory extends Factory
@@ -14,11 +14,11 @@ class LinkFactory extends Factory
      */
     public function definition()
     {
-        $collection = Collection::count() ? Collection::inRandomOrder()->first() : Collection::factory()->create();
+        $product = Product::count() ? Product::inRandomOrder()->first() : Product::factory()->create();
 
         return [
             'url' => $this->faker->url,
-            'collection_id' => $collection->id
+            'product_id' => $product->id
         ];
     }
 }

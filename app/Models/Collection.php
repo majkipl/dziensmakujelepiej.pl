@@ -24,4 +24,17 @@ class Collection extends Model
     {
         return $this->hasMany(Review::class);
     }
+
+    /**
+     * @return HasMany
+     */
+    public function products(): HasMany
+    {
+        return $this->hasMany(Product::class);
+    }
+
+    public function links()
+    {
+        return $this->hasManyThrough(Link::class, Product::class);
+    }
 }

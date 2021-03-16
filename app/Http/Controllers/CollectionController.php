@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Collection;
 use App\Models\Link;
 use App\Models\Review;
 use Illuminate\Http\Request;
@@ -10,315 +11,353 @@ class CollectionController extends Controller
 {
     public function honeycomb()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'honeycomb'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'honeycomb'))->get();
+        $slug = 'honeycomb';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/honeycomb', [
             'reviews' => $reviews,
-            'links' => $links
+            'slug' => $slug,
         ]);
     }
 
     public function structure()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'structure'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'structure'))->get();
+        $slug = 'structure';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/structure', [
             'reviews' => $reviews,
-            'links' => $links
+            'slug' => $slug,
         ]);
     }
 
     public function inspire()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'inspire'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'inspire'))->get();
+        $slug = 'inspire';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/inspire', [
             'reviews' => $reviews,
-            'links' => $links
+            'slug' => $slug,
         ]);
     }
 
     public function retro()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'retro'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'retro'))->get();
+        $slug = 'retro';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/retro', [
             'reviews' => $reviews,
-            'links' => $links
+            'slug' => $slug,
         ]);
     }
 
     public function geoSteel()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'geo-steel'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'geo-steel'))->get();
+        $slug = 'geo-steel';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/geo-steel', [
             'reviews' => $reviews,
-            'links' => $links
+            'slug' => $slug,
         ]);
     }
 
     public function buckingham()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'buckingham'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'buckingham'))->get();
+        $slug = 'buckingham';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/buckingham', [
             'reviews' => $reviews,
-            'links' => $links
+            'slug' => $slug,
         ]);
     }
 
     public function precisionControl()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'precision-control'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'precision-control'))->get();
+        $slug = 'precision-control';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/precision-control', [
             'reviews' => $reviews,
-            'links' => $links
+            'slug' => $slug,
         ]);
     }
 
     public function coloursPlus()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'colours-plus'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'colours-plus'))->get();
+        $slug = 'colours-plus';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/colours-plus', [
             'reviews' => $reviews,
-            'links' => $links
+            'slug' => $slug,
         ]);
     }
 
     public function texturesPlus()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'textures-plus'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'textures-plus'))->get();
+        $slug = 'textures-plus';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/textures-plus', [
             'reviews' => $reviews,
-            'links' => $links
+            'slug' => $slug,
         ]);
     }
 
     public function powerSteamUltra()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'power-steam-ultra'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'power-steam-ultra'))->get();
+        $slug = 'power-steam-ultra';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
+        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/power-steam-ultra', [
             'product' => 'psu',
             'reviews' => $reviews,
+            'slug' => $slug,
             'links' => $links
         ]);
     }
 
     public function steamGenie()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'steam-genie'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'steam-genie'))->get();
+        $slug = 'steam-genie';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
+        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/steam-genie', [
             'product' => 'sg',
             'reviews' => $reviews,
+            'slug' => $slug,
             'links' => $links
         ]);
     }
 
     public function cooperExpressPro()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'cooper-express-pro'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'cooper-express-pro'))->get();
+        $slug = 'cooper-express-pro';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
+        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/cooper-express-pro', [
             'product' => 'cep',
             'reviews' => $reviews,
+            'slug' => $slug,
             'links' => $links
         ]);
     }
 
     public function cooperExpress()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'cooper-express'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'cooper-express'))->get();
+        $slug = 'cooper-express';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
+        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/cooper-express', [
             'product' => 'ce',
             'reviews' => $reviews,
+            'slug' => $slug,
             'links' => $links
         ]);
     }
 
     public function impact()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'impact'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'impact'))->get();
+        $slug = 'impact';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
+        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/impact', [
             'product' => 'i',
             'reviews' => $reviews,
+            'slug' => $slug,
             'links' => $links
         ]);
     }
 
     public function colourControlSupreme()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'colour-control-supreme'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'colour-control-supreme'))->get();
+        $slug = 'colour-control-supreme';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
+        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/colour-control-supreme', [
             'product' => 'ccs',
             'reviews' => $reviews,
+            'slug' => $slug,
             'links' => $links
         ]);
     }
 
     public function quietSuperSteam()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'quiet-super-steam'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'quiet-super-steam'))->get();
+        $slug = 'quiet-super-steam';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
+        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/quiet-super-steam', [
             'product' => 'qss',
             'reviews' => $reviews,
+            'slug' => $slug,
             'links' => $links
         ]);
     }
 
     public function oneTemperature()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'one-temperature'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'one-temperature'))->get();
+        $slug = 'one-temperature';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
+        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/one-temperature', [
             'product' => 'ot',
             'reviews' => $reviews,
+            'slug' => $slug,
             'links' => $links
         ]);
     }
 
     public function pearlGlide()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'pearl-glide'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'pearl-glide'))->get();
+        $slug = 'pearl-glide';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
+        $links = Link::withWhereHas('collection', function ($query) {
+            $query->where('slug', 'pearl-glide');
+        })->get();
 
         return view('collection/pearl-glide', [
             'product' => 'pg',
             'reviews' => $reviews,
+            'slug' => $slug,
             'links' => $links
         ]);
     }
 
     public function mikserRecznySwirl()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'mikser-reczny-swirl'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'mikser-reczny-swirl'))->get();
+        $slug = 'mikser-reczny-swirl';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
+        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/mikser-reczny-swirl', [
             'product' => 'mrs',
             'reviews' => $reviews,
+            'slug' => $slug,
             'links' => $links
         ]);
     }
 
     public function opiekaczDeepFill()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'opiekacz-deep-fill-3w1-fiesta'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'opiekacz-deep-fill-3w1-fiesta'))->get();
+        $slug = 'opiekacz-deep-fill-3w1-fiesta';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
+        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/opiekacz-deep-fill-3w1-fiesta', [
             'product' => 'odf',
             'reviews' => $reviews,
+            'slug' => $slug,
             'links' => $links
         ]);
     }
 
     public function parowarCyfrowyMaxicook()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'parowar-cyfrowy-maxicook'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'parowar-cyfrowy-maxicook'))->get();
+        $slug = 'parowar-cyfrowy-maxicook';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
+        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/parowar-cyfrowy-maxicook', [
             'product' => 'pcm',
             'reviews' => $reviews,
+            'slug' => $slug,
             'links' => $links
         ]);
     }
 
     public function ryzowarCookHome()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'ryzowar-cook-home'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'ryzowar-cook-home'))->get();
+        $slug = 'ryzowar-cook-home';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
+        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/ryzowar-cook-home', [
             'product' => 'rch',
             'reviews' => $reviews,
+            'slug' => $slug,
             'links' => $links
         ]);
     }
 
     public function zestawDoRaclette()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'zestaw-do-raclette-fiesta'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'zestaw-do-raclette-fiesta'))->get();
+        $slug = 'zestaw-do-raclette-fiesta';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
+        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/zestaw-do-raclette-fiesta', [
             'product' => 'zdr',
             'reviews' => $reviews,
+            'slug' => $slug,
             'links' => $links
         ]);
     }
 
     public function wyciskarkaDoCytrusow()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'wyciskarka-do-cytrusow'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'wyciskarka-do-cytrusow'))->get();
+        $slug = 'wyciskarka-do-cytrusow';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
+        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/wyciskarka-do-cytrusow', [
             'product' => 'wdc',
             'reviews' => $reviews,
+            'slug' => $slug,
             'links' => $links
         ]);
     }
 
     public function frytownicaCyclofryPlus()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'frytownica-cyclofry-plus'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'frytownica-cyclofry-plus'))->get();
+        $slug = 'frytownica-cyclofry-plus';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
+        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/frytownica-cyclofry-plus', [
             'product' => 'fcp',
             'reviews' => $reviews,
+            'slug' => $slug,
             'links' => $links
         ]);
     }
 
     public function blenderKielichowySensigence()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'blender-kielichowy-sensigence'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'blender-kielichowy-sensigence'))->get();
+        $slug = 'blender-kielichowy-sensigence';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
+        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/blender-kielichowy-sensigence', [
             'product' => 'bks',
             'reviews' => $reviews,
+            'slug' => $slug,
             'links' => $links
         ]);
     }
 
     public function blenderRecznyDesire()
     {
-        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', 'blender-reczny-desire'))->get();
-        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', 'blender-reczny-desire'))->get();
+        $slug = 'blender-reczny-desire';
+        $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
+        $links = Link::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
 
         return view('collection/blender-reczny-desire', [
             'product' => 'brd',
             'reviews' => $reviews,
+            'slug' => $slug,
             'links' => $links
         ]);
     }

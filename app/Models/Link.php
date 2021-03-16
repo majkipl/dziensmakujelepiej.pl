@@ -9,11 +9,18 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Link extends Model
 {
     use HasFactory;
+    use \Znck\Eloquent\Traits\BelongsToThrough;
 
-    protected $fillable = ['url', 'collection_id'];
+    protected $fillable = ['url', 'product_id'];
 
     public $timestamps = false;
 
+    /**
+     * @param $query
+     * @param $relation
+     * @param $constraint
+     * @return mixed
+     */
     public function scopeWithWhereHas($query, $relation, $constraint){
         return $query->whereHas($relation, $constraint)
             ->with([$relation => $constraint]);
@@ -22,8 +29,14 @@ class Link extends Model
     /**
      * @return BelongsTo
      */
-    public function collection(): BelongsTo
+    public function product(): BelongsTo
     {
-        return $this->belongsTo(Collection::class);
+        return $this->belongsTo(Product::class);
     }
+
+    public function collection()
+    {
+        return $this->belongsToThrough(Collection::class, Product::class);
+    }
+
 }
