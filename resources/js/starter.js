@@ -227,7 +227,63 @@ const starter = {
                 var button = $(e.relatedTarget);
                 var recipient = button.data("series");
                 var modal = $(this);
-                modal.find(".modal-body").load(`/html/modal-${recipient}.html`);
+
+                const collection = button.data("collection");
+                const models = button.data("models").split(',');
+                const url = button.data("url");
+
+                console.log(collection);
+                console.log(models);
+
+
+                $.getJSON(url, function (jsonData) {
+                    console.log(jsonData);
+
+                    let modalBody = $('<div>', {
+                        class: 'row',
+                    });
+
+                    $.each(jsonData.rows, function(index, link) {
+                        if (models.includes(link.product.code)) {
+                            console.log(link.url);
+
+                            let productLink = $('<a>', {
+                                class: 'product-link',
+                                href: link.url,
+                                target: '_blank',
+                                rel: 'noopener noreferrer',
+                            });
+
+                            let img = $('<img>', {
+                                'src': '/images/series/' + link.product.collection.slug + '/' + link.product.code + '.png'
+                            });
+
+                            let productImg = $('<div>', {
+                                class: 'product-img text-center',
+                                'data-code': link.product.code
+                            }).append(img);
+
+
+                            let brandBox = $('<div>', {
+                                class: 'brand-box',
+                            });
+
+                            productLink.append(productImg).append(brandBox);
+
+                            let colDiv = $('<div>', {
+                                class: 'col-6 col-sm-4 col-lg-3 col-xl-2'
+                            }).append(productLink);
+
+                            modalBody.append(colDiv);
+                        }
+                    });
+
+                    modal.find(".modal-body .row").remove();
+                    modal.find(".modal-body").append(modalBody);
+
+                    console.log(modalBody);
+                });
+
             });
         },
 

@@ -23,9 +23,9 @@
                 <div class="col-lg-6">
                     <h2 class="title">Czajnik Colours Plus</h2>
                     <div class="button-div">
-                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-series="colours-plus-kettle">Kup teraz</a>
+                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-collection="{{ $slug }}" data-models="20415-70" data-url="{{ route('api.collection.links', ['slug' => $slug]) }}">Kup teraz</a>
                     </div>
-                    <img id="product-img-0" class="product-img lazy" data-src="{{ asset('images/series/colours-plus/kettle/yellow.png') }}" alt="" />
+                    <img id="product-img-0" class="product-img lazy" data-src="{{ asset('images/series/colours-plus/20415-70.png') }}" alt="" />
                 </div>
                 <div class="col-lg-6">
                     <ul class="features">
@@ -57,9 +57,9 @@
                 <div class="col-lg-6 order-lg-2">
                     <h2 class="title">Toster Colours Plus</h2>
                     <div class="button-div">
-                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-series="colours-plus-toaster">Kup teraz</a>
+                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-collection="{{ $slug }}" data-models="23334-56" data-url="{{ route('api.collection.links', ['slug' => $slug]) }}">Kup teraz</a>
                     </div>
-                    <img id="product-img-1" class="product-img lazy" data-src="{{ asset('images/series/colours-plus/toaster/yellow.png') }}" alt="" />
+                    <img id="product-img-1" class="product-img lazy" data-src="{{ asset('images/series/colours-plus/23334-56.png') }}" alt="" />
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <ul class="features">
@@ -95,9 +95,9 @@
                 <div class="col-lg-6">
                     <h2 class="title">Ekspres Colours Plus</h2>
                     <div class="button-div">
-                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-series="colours-plus-express">Kup teraz</a>
+                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-collection="{{ $slug }}" data-models="24033-56,24336-56" data-url="{{ route('api.collection.links', ['slug' => $slug]) }}">Kup teraz</a>
                     </div>
-                    <img id="product-img-2" class="product-img lazy" data-src="{{ asset('images/series/colours-plus/express/yellow.png') }}" alt="" />
+                    <img id="product-img-2" class="product-img lazy" data-src="{{ asset('images/series/colours-plus/24033-56.png') }}" alt="" />
                 </div>
                 <div class="col-lg-6">
                     <ul class="features">

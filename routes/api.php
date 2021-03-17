@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Api\ApplicationController;
+use App\Http\Controllers\Api\CollectionController;
+use App\Http\Controllers\Api\ReviewController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,8 +17,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/collection/{slug}/links', [CollectionController::class, 'links'])->name('api.collection.links');
+
 Route::middleware(['api.keys'])->group(function () {
     Route::middleware(['api.auth'])->group(function () {
-        //
+        Route::get('/applications', [ApplicationController::class, 'index'])->name('api.application');
+
+        Route::get('/reviews', [ReviewController::class, 'index'])->name('api.review');
+        Route::post('/reviews', [ReviewController::class, 'add'])->name('api.review.add');
+        Route::put('/reviews', [ReviewController::class, 'update'])->name('api.review.update');
+        Route::delete('/reviews/{review}', [ReviewController::class, 'delete'])->name('api.review.delete');
     });
 });

@@ -24,13 +24,13 @@
                 <div class="col-lg-6">
                     <h2 class="title">Czajnik Inspire</h2>
                     <div class="button-div">
-                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-series="inspire-kettle">Kup teraz</a>
+                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-collection="{{ $slug }}" data-models="24360-70,24361-70" data-url="{{ route('api.collection.links', ['slug' => $slug]) }}">Kup teraz</a>
                     </div>
-                    <img id="product-img-0" class="product-img lazy" data-src="{{ asset('images/series/inspire/kettle/black.png') }}" alt="" />
+                    <img id="product-img-0" class="product-img lazy" data-src="{{ asset('images/series/inspire/24361-70.png') }}" alt="" />
                     <div class="row color-box">
                         <div class="color-select">
-                            <button class="color-option black active" data-img="#product-img-0" data-src="{{ asset('images/series/inspire/kettle/black.png') }}" aria-label="color-option"></button>
-                            <button class="color-option white" data-img="#product-img-0" data-src="{{ asset('images/series/inspire/kettle/white.png') }}" aria-label="color-option"></button>
+                            <button class="color-option black active" data-img="#product-img-0" data-src="{{ asset('images/series/inspire/24361-70.png') }}" aria-label="color-option"></button>
+                            <button class="color-option white" data-img="#product-img-0" data-src="{{ asset('images/series/inspire/24360-70.png') }}" aria-label="color-option"></button>
                         </div>
                         <div class="color-text">wybierz kolor serii</div>
                     </div>
@@ -73,13 +73,13 @@
                 <div class="col-lg-6 order-lg-2">
                     <h2 class="title">Toster Inspire</h2>
                     <div class="button-div">
-                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-series="inspire-toaster">Kup teraz</a>
+                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-collection="{{ $slug }}" data-models="24370-56,24371-56" data-url="{{ route('api.collection.links', ['slug' => $slug]) }}">Kup teraz</a>
                     </div>
-                    <img id="product-img-1" class="product-img lazy" data-src="{{ asset('images/series/inspire/toaster/black.png') }}" alt="" />
+                    <img id="product-img-1" class="product-img lazy" data-src="{{ asset('images/series/inspire/24371-56.png') }}" alt="" />
                     <div class="row color-box">
                         <div class="color-select">
-                            <button class="color-option black active" data-img="#product-img-1" data-src="{{ asset('images/series/inspire/toaster/black.png') }}" aria-label="color-option"></button>
-                            <button class="color-option white" data-img="#product-img-1" data-src="{{ asset('images/series/inspire/toaster/white.png') }}" aria-label="color-option"></button>
+                            <button class="color-option black active" data-img="#product-img-1" data-src="{{ asset('images/series/inspire/24371-56.png') }}" aria-label="color-option"></button>
+                            <button class="color-option white" data-img="#product-img-1" data-src="{{ asset('images/series/inspire/24370-56.png') }}" aria-label="color-option"></button>
                         </div>
                         <div class="color-text">wybierz kolor serii</div>
                     </div>
@@ -114,13 +114,13 @@
                 <div class="col-lg-6">
                     <h2 class="title">Ekspres Inspire</h2>
                     <div class="button-div">
-                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-series="inspire-express">Kup teraz</a>
+                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-collection="{{ $slug }}" data-models="24390-56,24391-56" data-url="{{ route('api.collection.links', ['slug' => $slug]) }}">Kup teraz</a>
                     </div>
-                    <img id="product-img-2" class="product-img lazy" data-src="{{ asset('images/series/inspire/express/black.png') }}" alt="" />
+                    <img id="product-img-2" class="product-img lazy" data-src="{{ asset('images/series/inspire/24391-56.png') }}" alt="" />
                     <div class="row color-box">
                         <div class="color-select">
-                            <button class="color-option black active" data-img="#product-img-2" data-src="{{ asset('images/series/inspire/express/black.png') }}" aria-label="color-option"></button>
-                            <button class="color-option white" data-img="#product-img-2" data-src="{{ asset('images/series/inspire/express/white.png') }}" aria-label="color-option"></button>
+                            <button class="color-option black active" data-img="#product-img-2" data-src="{{ asset('images/series/inspire/24391-56.png') }}" aria-label="color-option"></button>
+                            <button class="color-option white" data-img="#product-img-2" data-src="{{ asset('images/series/inspire/24390-56.png') }}" aria-label="color-option"></button>
                         </div>
                         <div class="color-text">wybierz kolor serii</div>
                     </div>

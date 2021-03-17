@@ -24,9 +24,9 @@
                 <div class="col-lg-6">
                     <h2 class="title">Czajnik Geo Steel</h2>
                     <div class="button-div">
-                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-series="geo-steel-kettle">Kup teraz</a>
+                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-collection="{{ $slug }}" data-models="25240-70" data-url="{{ route('api.collection.links', ['slug' => $slug]) }}">Kup teraz</a>
                     </div>
-                    <img id="product-img-0" class="product-img lazy" data-src="{{ asset('images/series/geo-steel/kettle/gray.png') }}" alt="" />
+                    <img id="product-img-0" class="product-img lazy" data-src="{{ asset('images/series/geo-steel/25240-70.png') }}" alt="" />
                 </div>
                 <div class="col-lg-6">
                     <ul class="features">
@@ -62,9 +62,9 @@
                 <div class="col-lg-6 order-lg-2">
                     <h2 class="title">Toster Geo Steel</h2>
                     <div class="button-div">
-                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-series="geo-steel-toaster">Kup teraz</a>
+                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-collection="{{ $slug }}" data-models="25250-56" data-url="{{ route('api.collection.links', ['slug' => $slug]) }}">Kup teraz</a>
                     </div>
-                    <img id="product-img-1" class="product-img lazy" data-src="{{ asset('images/series/geo-steel/toaster/gray.png') }}" alt="" />
+                    <img id="product-img-1" class="product-img lazy" data-src="{{ asset('images/series/geo-steel/25250-56.png') }}" alt="" />
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <ul class="features">
@@ -104,9 +104,9 @@
                 <div class="col-lg-6">
                     <h2 class="title">Ekspres Geo Steel</h2>
                     <div class="button-div">
-                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-series="geo-steel-express">Kup teraz</a>
+                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-collection="{{ $slug }}" data-models="25270-56" data-url="{{ route('api.collection.links', ['slug' => $slug]) }}">Kup teraz</a>
                     </div>
-                    <img id="product-img-2" class="product-img lazy" data-src="{{ asset('images/series/geo-steel/express/gray.png') }}" alt="" />
+                    <img id="product-img-2" class="product-img lazy" data-src="{{ asset('images/series/geo-steel/25270-56.png') }}" alt="" />
                 </div>
                 <div class="col-lg-6">
                     <ul class="features">

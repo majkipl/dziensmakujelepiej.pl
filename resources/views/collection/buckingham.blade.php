@@ -24,9 +24,9 @@
                 <div class="col-lg-6">
                     <h2 class="title">Czajnik Buckingham</h2>
                     <div class="button-div">
-                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-series="buckingham-kettle">Kup teraz</a>
+                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-collection="{{ $slug }}" data-models="20460-56" data-url="{{ route('api.collection.links', ['slug' => $slug]) }}">Kup teraz</a>
                     </div>
-                    <img id="product-img-0" class="product-img lazy" data-src="{{ asset('images/series/buckingham/kettle/gray.png') }}" alt="" />
+                    <img id="product-img-0" class="product-img lazy" data-src="{{ asset('images/series/buckingham/20460-56.png') }}" alt="" />
                 </div>
                 <div class="col-lg-6">
                     <ul class="features">
@@ -62,9 +62,9 @@
                 <div class="col-lg-6 order-lg-2">
                     <h2 class="title">Czajnik z regulacją temperatury Buckingham</h2>
                     <div class="button-div">
-                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-series="buckingham-kettle-with-temp-control">Kup teraz</a>
+                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-collection="{{ $slug }}" data-models="21040-70" data-url="{{ route('api.collection.links', ['slug' => $slug]) }}">Kup teraz</a>
                     </div>
-                    <img id="product-img-1" class="product-img lazy" data-src="{{ asset('images/series/buckingham/kettle-with-temp-control/gray.png') }}" alt="" />
+                    <img id="product-img-1" class="product-img lazy" data-src="{{ asset('images/series/buckingham/21040-70.png') }}" alt="" />
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <ul class="features">
@@ -104,9 +104,9 @@
                 <div class="col-lg-6">
                     <h2 class="title">Ekspres Buckingham</h2>
                     <div class="button-div">
-                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-series="buckingham-express">Kup teraz</a>
+                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-collection="{{ $slug }}" data-models="20680-56" data-url="{{ route('api.collection.links', ['slug' => $slug]) }}">Kup teraz</a>
                     </div>
-                    <img id="product-img-2" class="product-img lazy" data-src="{{ asset('images/series/buckingham/express/gray.png') }}" alt="" />
+                    <img id="product-img-2" class="product-img lazy" data-src="{{ asset('images/series/buckingham/20680-56.png') }}" alt="" />
                 </div>
                 <div class="col-lg-6">
                     <ul class="features">

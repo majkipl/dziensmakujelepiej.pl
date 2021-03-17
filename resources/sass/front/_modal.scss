@@ -61,149 +61,288 @@
         display: block;
 
         .product-img {
-            background: no-repeat center / contain;
-            height: 75px;
+            //background: no-repeat center / contain;
             margin: 10px auto;
 
-            &[data-option="buckingham-express-gray"] {
-                background-image: url("/images/series/buckingham/express/gray.png");
+            img {
+                height: 75px;
             }
-            &[data-option="buckingham-kettle-gray"] {
-                background-image: url("/images/series/buckingham/kettle/gray.png");
+
+            //&[data-option="buckingham-express-gray"] {
+            //    background-image: url("/images/series/buckingham/express/gray.png");
+            //}
+            //&[data-option="buckingham-kettle-gray"] {
+            //    background-image: url("/images/series/buckingham/kettle/gray.png");
+            //}
+            //&[data-option="buckingham-kettle-with-temp-control-gray"] {
+            //    background-image: url("/images/series/buckingham/kettle-with-temp-control/gray.png");
+            //}
+            //&[data-option="colours-plus-express-yellow"] {
+            //    background-image: url("/images/series/colours-plus/express/yellow.png");
+            //}
+            //&[data-option="colours-plus-kettle-yellow"] {
+            //    background-image: url("/images/series/colours-plus/kettle/yellow.png");
+            //}
+            //&[data-option="colours-plus-toaster-yellow"] {
+            //    background-image: url("/images/series/colours-plus/toaster/yellow.png");
+            //}
+            //&[data-option="geo-steel-express-gray"] {
+            //    background-image: url("/images/series/geo-steel/express/gray.png");
+            //}
+            //&[data-option="geo-steel-kettle-gray"] {
+            //    background-image: url("/images/series/geo-steel/kettle/gray.png");
+            //}
+            //&[data-option="geo-steel-toaster-gray"] {
+            //    background-image: url("/images/series/geo-steel/toaster/gray.png");
+            //}
+            //&[data-option="honeycomb-express-black"] {
+            //    background-image: url("/images/series/honeycomb/express/black.png");
+            //}
+            //&[data-option="honeycomb-express-white"] {
+            //    background-image: url("/images/series/honeycomb/express/white.png");
+            //}
+            //&[data-option="honeycomb-kettle-black"] {
+            //    background-image: url("/images/series/honeycomb/kettle/black.png");
+            //}
+            //&[data-option="honeycomb-kettle-white"] {
+            //    background-image: url("/images/series/honeycomb/kettle/white.png");
+            //}
+            //&[data-option="honeycomb-toaster-black"] {
+            //    background-image: url("/images/series/honeycomb/toaster/black.png");
+            //}
+            //&[data-option="honeycomb-toaster-white"] {
+            //    background-image: url("/images/series/honeycomb/toaster/white.png");
+            //}
+            //&[data-option="inspire-express-black"] {
+            //    background-image: url("/images/series/inspire/express/black.png");
+            //}
+            //&[data-option="inspire-express-white"] {
+            //    background-image: url("/images/series/inspire/express/white.png");
+            //}
+            //&[data-option="inspire-kettle-black"] {
+            //    background-image: url("/images/series/inspire/kettle/black.png");
+            //}
+            //&[data-option="inspire-kettle-white"] {
+            //    background-image: url("/images/series/inspire/kettle/white.png");
+            //}
+            //&[data-option="inspire-toaster-black"] {
+            //    background-image: url("/images/series/inspire/toaster/black.png");
+            //}
+            //&[data-option="inspire-toaster-white"] {
+            //    background-image: url("/images/series/inspire/toaster/white.png");
+            //}
+            //&[data-option="precision-control-kettle-white"] {
+            //    background-image: url("/images/series/precision-control/kettle/white.png");
+            //}
+            //&[data-option="retro-express-black"] {
+            //    background-image: url("/images/series/retro/express/black.png");
+            //}
+            //&[data-option="retro-express-red"] {
+            //    background-image: url("/images/series/retro/express/red.png");
+            //}
+            //&[data-option="retro-express-white"] {
+            //    background-image: url("/images/series/retro/express/white.png");
+            //}
+            //&[data-option="retro-express-yellow"] {
+            //    background-image: url("/images/series/retro/express/yellow.png");
+            //}
+            //&[data-option="retro-kettle-black"] {
+            //    background-image: url("/images/series/retro/kettle/black.png");
+            //}
+            //&[data-option="retro-kettle-red"] {
+            //    background-image: url("/images/series/retro/kettle/red.png");
+            //}
+            //&[data-option="retro-kettle-white"] {
+            //    background-image: url("/images/series/retro/kettle/white.png");
+            //}
+            //&[data-option="retro-kettle-yellow"] {
+            //    background-image: url("/images/series/retro/kettle/yellow.png");
+            //}
+            //&[data-option="retro-toaster-black"] {
+            //    background-image: url("/images/series/retro/toaster/black.png");
+            //}
+            //&[data-option="retro-toaster-red"] {
+            //    background-image: url("/images/series/retro/toaster/red.png");
+            //}
+            //&[data-option="retro-toaster-white"] {
+            //    background-image: url("/images/series/retro/toaster/white.png");
+            //}
+            //&[data-option="retro-toaster-yellow"] {
+            //    background-image: url("/images/series/retro/toaster/yellow.png");
+            //}
+            //&[data-option="structure-kettle-white"] {
+            //    background-image: url("/images/series/structure/kettle/white.png");
+            //}
+            //&[data-option="structure-kettle-black"] {
+            //    background-image: url("/images/series/structure/kettle/black.png");
+            //}
+            //&[data-option="structure-toaster-black"] {
+            //    background-image: url("/images/series/structure/toaster/black.png");
+            //}
+            //&[data-option="structure-toaster-white"] {
+            //    background-image: url("/images/series/structure/toaster/white.png");
+            //}
+            //&[data-option="textures-plus-express-black"] {
+            //    background-image: url("/images/series/textures-plus/express/black.png");
+            //}
+            //&[data-option="textures-plus-kettle-black"] {
+            //    background-image: url("/images/series/textures-plus/kettle/black.png");
+            //}
+            //&[data-option="textures-plus-toaster-black"] {
+            //    background-image: url("/images/series/textures-plus/toaster/black.png");
+            //}
+            //&[data-option="mikser-reczny-swirl-black"] {
+            //    background-image: url("/images/series/mikser-reczny-swirl/black.png");
+            //}
+            //&[data-option="mikser-reczny-swirl-green"] {
+            //    background-image: url("/images/series/mikser-reczny-swirl/green.png");
+            //}
+            //&[data-option="mikser-reczny-swirl-gold"] {
+            //    background-image: url("/images/series/mikser-reczny-swirl/gold.png");
+            //}
+            //&[data-option="mikser-reczny-swirl-blue"] {
+            //    background-image: url("/images/series/mikser-reczny-swirl/blue.png");
+            //}
+        }
+
+        &[href*="agdperfekt.pl"] {
+            .brand-box {
+                background-image: url("/images/brands/agdperfekt.png");
             }
-            &[data-option="buckingham-kettle-with-temp-control-gray"] {
-                background-image: url("/images/series/buckingham/kettle-with-temp-control/gray.png");
+        }
+        &[href*="allegro.pl"] {
+            .brand-box {
+                background-image: url("/images/brands/allegro.png");
             }
-            &[data-option="colours-plus-express-yellow"] {
-                background-image: url("/images/series/colours-plus/express/yellow.png");
+        }
+        &[href*="al.to"] {
+            .brand-box {
+                background-image: url("/images/brands/alto.png");
             }
-            &[data-option="colours-plus-kettle-yellow"] {
-                background-image: url("/images/series/colours-plus/kettle/yellow.png");
+        }
+        &[href*="avans.pl"] {
+            .brand-box {
+                background-image: url("/images/brands/avans.png");
             }
-            &[data-option="colours-plus-toaster-yellow"] {
-                background-image: url("/images/series/colours-plus/toaster/yellow.png");
+        }
+        &[href*="electro.pl"] {
+            .brand-box {
+                background-image: url("/images/brands/electro.png");
             }
-            &[data-option="geo-steel-express-gray"] {
-                background-image: url("/images/series/geo-steel/express/gray.png");
+        }
+        &[href*="empik.com"] {
+            .brand-box {
+                background-image: url("/images/brands/empik.png");
             }
-            &[data-option="geo-steel-kettle-gray"] {
-                background-image: url("/images/series/geo-steel/kettle/gray.png");
+        }
+        &[href*="energa.pl"] {
+            .brand-box {
+                background-image: url("/images/brands/energa.png");
             }
-            &[data-option="geo-steel-toaster-gray"] {
-                background-image: url("/images/series/geo-steel/toaster/gray.png");
+        }
+        &[href*="euro.com.pl"] {
+            .brand-box {
+                background-image: url("/images/brands/euro.png");
             }
-            &[data-option="honeycomb-express-black"] {
-                background-image: url("/images/series/honeycomb/express/black.png");
+        }
+        &[href*="kakto.pl"] {
+            .brand-box {
+                background-image: url("/images/brands/kakto.png");
             }
-            &[data-option="honeycomb-express-white"] {
-                background-image: url("/images/series/honeycomb/express/white.png");
+        }
+        &[href*="karen"] {
+            .brand-box {
+                background-image: url("/images/brands/karen.png");
             }
-            &[data-option="honeycomb-kettle-black"] {
-                background-image: url("/images/series/honeycomb/kettle/black.png");
+        }
+        &[href*="komputronik.pl"] {
+            .brand-box {
+                background-image: url("/images/brands/komputronik.png");
             }
-            &[data-option="honeycomb-kettle-white"] {
-                background-image: url("/images/series/honeycomb/kettle/white.png");
+        }
+        &[href*="mambonus.pl"] {
+            .brand-box {
+                background-image: url("/images/brands/mambonus.png");
             }
-            &[data-option="honeycomb-toaster-black"] {
-                background-image: url("/images/series/honeycomb/toaster/black.png");
+        }
+        &[href*="maxelektro"] {
+            .brand-box {
+                background-image: url("/images/brands/maxelektro.png");
             }
-            &[data-option="honeycomb-toaster-white"] {
-                background-image: url("/images/series/honeycomb/toaster/white.png");
+        }
+        &[href*="mediadomek.pl"] {
+            .brand-box {
+                background-image: url("/images/brands/mediadomek.png");
             }
-            &[data-option="inspire-express-black"] {
-                background-image: url("/images/series/inspire/express/black.png");
+        }
+        &[href*="mediaexpert.pl"] {
+            .brand-box {
+                background-image: url("/images/brands/mediaexpert.png");
             }
-            &[data-option="inspire-express-white"] {
-                background-image: url("/images/series/inspire/express/white.png");
+        }
+        &[href*="mediamarkt.pl"] {
+            .brand-box {
+                background-image: url("/images/brands/mediamarkt.png");
             }
-            &[data-option="inspire-kettle-black"] {
-                background-image: url("/images/series/inspire/kettle/black.png");
+        }
+        &[href*="morele.net"] {
+            .brand-box {
+                background-image: url("/images/brands/morele.png");
             }
-            &[data-option="inspire-kettle-white"] {
-                background-image: url("/images/series/inspire/kettle/white.png");
+        }
+        &[href*="mycenter"] {
+            .brand-box {
+                background-image: url("/images/brands/mycenter.png");
             }
-            &[data-option="inspire-toaster-black"] {
-                background-image: url("/images/series/inspire/toaster/black.png");
+        }
+        &[href*="neo24.pl"] {
+            .brand-box {
+                background-image: url("/images/brands/neo24.png");
             }
-            &[data-option="inspire-toaster-white"] {
-                background-image: url("/images/series/inspire/toaster/white.png");
+        }
+        &[href*="neonet.pl"] {
+            .brand-box {
+                background-image: url("/images/brands/neonet.png");
             }
-            &[data-option="precision-control-kettle-white"] {
-                background-image: url("/images/series/precision-control/kettle/white.png");
+        }
+        &[href*="oleole.pl"] {
+            .brand-box {
+                background-image: url("/images/brands/oleole.png");
             }
-            &[data-option="retro-express-black"] {
-                background-image: url("/images/series/retro/express/black.png");
+        }
+        &[href*="sklep.payback.pl"] {
+            .brand-box {
+                background-image: url("/images/brands/payback.png");
             }
-            &[data-option="retro-express-red"] {
-                background-image: url("/images/series/retro/express/red.png");
+        }
+        &[href*="saturn.pl"] {
+            .brand-box {
+                background-image: url("/images/brands/saturn.png");
             }
-            &[data-option="retro-express-white"] {
-                background-image: url("/images/series/retro/express/white.png");
+        }
+        &[href*="selgros24.pl"] {
+            .brand-box {
+                background-image: url("/images/brands/selgros24.png");
             }
-            &[data-option="retro-express-yellow"] {
-                background-image: url("/images/series/retro/express/yellow.png");
-            }
-            &[data-option="retro-kettle-black"] {
-                background-image: url("/images/series/retro/kettle/black.png");
-            }
-            &[data-option="retro-kettle-red"] {
-                background-image: url("/images/series/retro/kettle/red.png");
-            }
-            &[data-option="retro-kettle-white"] {
-                background-image: url("/images/series/retro/kettle/white.png");
-            }
-            &[data-option="retro-kettle-yellow"] {
-                background-image: url("/images/series/retro/kettle/yellow.png");
-            }
-            &[data-option="retro-toaster-black"] {
-                background-image: url("/images/series/retro/toaster/black.png");
-            }
-            &[data-option="retro-toaster-red"] {
-                background-image: url("/images/series/retro/toaster/red.png");
-            }
-            &[data-option="retro-toaster-white"] {
-                background-image: url("/images/series/retro/toaster/white.png");
-            }
-            &[data-option="retro-toaster-yellow"] {
-                background-image: url("/images/series/retro/toaster/yellow.png");
-            }
-            &[data-option="structure-kettle-white"] {
-                background-image: url("/images/series/structure/kettle/white.png");
-            }
-            &[data-option="structure-kettle-black"] {
-                background-image: url("/images/series/structure/kettle/black.png");
-            }
-            &[data-option="structure-toaster-black"] {
-                background-image: url("/images/series/structure/toaster/black.png");
-            }
-            &[data-option="structure-toaster-white"] {
-                background-image: url("/images/series/structure/toaster/white.png");
-            }
-            &[data-option="textures-plus-express-black"] {
-                background-image: url("/images/series/textures-plus/express/black.png");
-            }
-            &[data-option="textures-plus-kettle-black"] {
-                background-image: url("/images/series/textures-plus/kettle/black.png");
-            }
-            &[data-option="textures-plus-toaster-black"] {
-                background-image: url("/images/series/textures-plus/toaster/black.png");
-            }
-            &[data-option="mikser-reczny-swirl-black"] {
-                background-image: url("/images/series/mikser-reczny-swirl/black.png");
-            }
-            &[data-option="mikser-reczny-swirl-green"] {
-                background-image: url("/images/series/mikser-reczny-swirl/green.png");
-            }
-            &[data-option="mikser-reczny-swirl-gold"] {
-                background-image: url("/images/series/mikser-reczny-swirl/gold.png");
-            }
-            &[data-option="mikser-reczny-swirl-blue"] {
-                background-image: url("/images/series/mikser-reczny-swirl/blue.png");
+        }
+        &[href*="zadowolenie.pl"] {
+            .brand-box {
+                background-image: url("/images/brands/zadowolenie.png");
             }
         }
 
+
+
+
+
+
+
+
+
+
+
         .brand-box {
-            background: no-repeat center / contain;
+            background: no-repeat center / 75%;
             height: 60px;
             margin: 20px auto;
 

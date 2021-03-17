@@ -23,9 +23,9 @@
                 <div class="col-lg-6">
                     <h2 class="title">Czajnik Precision Control</h2>
                     <div class="button-div">
-                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-series="precision-control-kettle">Kup teraz</a>
+                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-collection="{{ $slug }}" data-models="21150-70" data-url="{{ route('api.collection.links', ['slug' => $slug]) }}">Kup teraz</a>
                     </div>
-                    <img id="product-img-0" class="product-img lazy" data-src="{{ asset('images/series/precision-control/kettle/white.png') }}" alt="" />
+                    <img id="product-img-0" class="product-img lazy" data-src="{{ asset('images/series/precision-control/21150-70.png') }}" alt="" />
                 </div>
                 <div class="col-lg-6">
                     <ul class="features">

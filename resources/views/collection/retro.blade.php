@@ -24,15 +24,15 @@
                 <div class="col-lg-6">
                     <h2 class="title">Czajnik Retro</h2>
                     <div class="button-div">
-                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-series="retro-kettle">Kup teraz</a>
+                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-collection="{{ $slug }}" data-models="21679-70,21671-70,21672-70,21674-70" data-url="{{ route('api.collection.links', ['slug' => $slug]) }}">Kup teraz</a>
                     </div>
-                    <img id="product-img-0" class="product-img lazy" data-src="{{ asset('images/series/retro/kettle/black.png') }}" alt="" />
+                    <img id="product-img-0" class="product-img lazy" data-src="{{ asset('images/series/retro/21671-70.png') }}" alt="" />
                     <div class="row color-box">
                         <div class="color-select">
-                            <button class="color-option black active" data-img="#product-img-0" data-src="{{ asset('images/series/retro/kettle/black.png') }}" aria-label="color-option"></button>
-                            <button class="color-option white" data-img="#product-img-0" data-src="{{ asset('images/series/retro/kettle/white.png') }}" aria-label="color-option"></button>
-                            <button class="color-option red" data-img="#product-img-0" data-src="{{ asset('images/series/retro/kettle/red.png') }}" aria-label="color-option"></button>
-                            <button class="color-option yellow" data-img="#product-img-0" data-src="{{ asset('images/series/retro/kettle/yellow.png') }}" aria-label="color-option"></button>
+                            <button class="color-option black active" data-img="#product-img-0" data-src="{{ asset('images/series/retro/21671-70.png') }}" aria-label="color-option"></button>
+                            <button class="color-option white" data-img="#product-img-0" data-src="{{ asset('images/series/retro/21674-70.png') }}" aria-label="color-option"></button>
+                            <button class="color-option red" data-img="#product-img-0" data-src="{{ asset('images/series/retro/21679-70.png') }}" aria-label="color-option"></button>
+                            <button class="color-option yellow" data-img="#product-img-0" data-src="{{ asset('images/series/retro/21672-70.png') }}" aria-label="color-option"></button>
                         </div>
                         <div class="color-text">wybierz kolor serii</div>
                     </div>
@@ -79,15 +79,15 @@
                 <div class="col-lg-6 order-lg-2">
                     <h2 class="title">Toster Retro</h2>
                     <div class="button-div">
-                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-series="retro-toaster">Kup teraz</a>
+                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-collection="{{ $slug }}" data-models="21680-56,21681-56,21682-56,21683-56" data-url="{{ route('api.collection.links', ['slug' => $slug]) }}">Kup teraz</a>
                     </div>
-                    <img id="product-img-1" class="product-img lazy" data-src="{{ asset('images/series/retro/toaster/black.png') }}" alt="" />
+                    <img id="product-img-1" class="product-img lazy" data-src="{{ asset('images/series/retro/21681-56.png') }}" alt="" />
                     <div class="row color-box">
                         <div class="color-select">
-                            <button class="color-option black active" data-img="#product-img-1" data-src="{{ asset('images/series/retro/toaster/black.png') }}" aria-label="color-option"></button>
-                            <button class="color-option white" data-img="#product-img-1" data-src="{{ asset('images/series/retro/toaster/white.png') }}" aria-label="color-option"></button>
-                            <button class="color-option red" data-img="#product-img-1" data-src="{{ asset('images/series/retro/toaster/red.png') }}" aria-label="color-option"></button>
-                            <button class="color-option yellow" data-img="#product-img-1" data-src="{{ asset('images/series/retro/toaster/yellow.png') }}" aria-label="color-option"></button>
+                            <button class="color-option black active" data-img="#product-img-1" data-src="{{ asset('images/series/retro/21681-56.png') }}" aria-label="color-option"></button>
+                            <button class="color-option white" data-img="#product-img-1" data-src="{{ asset('images/series/retro/21683-56.png') }}" aria-label="color-option"></button>
+                            <button class="color-option red" data-img="#product-img-1" data-src="{{ asset('images/series/retro/21680-56.png') }}" aria-label="color-option"></button>
+                            <button class="color-option yellow" data-img="#product-img-1" data-src="{{ asset('images/series/retro/21682-56.png') }}" aria-label="color-option"></button>
                         </div>
                         <div class="color-text">wybierz kolor serii</div>
                     </div>
@@ -122,15 +122,15 @@
                 <div class="col-lg-6">
                     <h2 class="title">Ekspres Retro</h2>
                     <div class="button-div">
-                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-series="retro-express">Kup teraz</a>
+                        <a class="button" href="#" data-toggle="modal" data-target="#modal" data-collection="{{ $slug }}" data-models="21700-56,21701-56,21702-56" data-url="{{ route('api.collection.links', ['slug' => $slug]) }}">Kup teraz</a>
                     </div>
-                    <img id="product-img-2" class="product-img lazy" data-src="{{ asset('images/series/retro/express/black.png') }}" alt="" />
+                    <img id="product-img-2" class="product-img lazy" data-src="{{ asset('images/series/retro/21701-56.png') }}" alt="" />
                     <div class="row color-box">
                         <div class="color-select">
-                            <button class="color-option black active" data-img="#product-img-2" data-src="{{ asset('images/series/retro/express/black.png') }}" aria-label="color-option"></button>
-                            <button class="color-option white" data-img="#product-img-2" data-src="{{ asset('images/series/retro/express/white.png') }}" aria-label="color-option"></button>
-                            <button class="color-option red" data-img="#product-img-2" data-src="{{ asset('images/series/retro/express/red.png') }}" aria-label="color-option"></button>
-                            <button class="color-option yellow" data-img="#product-img-2" data-src="{{ asset('images/series/retro/express/yellow.png') }}" aria-label="color-option"></button>
+                            <button class="color-option black active" data-img="#product-img-2" data-src="{{ asset('images/series/retro/21701-56.png') }}" aria-label="color-option"></button>
+                            <button class="color-option white" data-img="#product-img-2" data-src="{{ asset('images/series/retro/21703-56.png') }}" aria-label="color-option"></button>
+                            <button class="color-option red" data-img="#product-img-2" data-src="{{ asset('images/series/retro/21700-56.png') }}" aria-label="color-option"></button>
+                            <button class="color-option yellow" data-img="#product-img-2" data-src="{{ asset('images/series/retro/21702-56.png') }}" aria-label="color-option"></button>
                         </div>
                         <div class="color-text">wybierz kolor serii</div>
                     </div>

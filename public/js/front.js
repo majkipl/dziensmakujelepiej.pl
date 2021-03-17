@@ -2335,7 +2335,46 @@ var starter = {
         var button = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.relatedTarget);
         var recipient = button.data("series");
         var modal = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this);
-        modal.find(".modal-body").load("/html/modal-".concat(recipient, ".html"));
+        var collection = button.data("collection");
+        var models = button.data("models").split(',');
+        var url = button.data("url");
+        console.log(collection);
+        console.log(models);
+        jquery__WEBPACK_IMPORTED_MODULE_0___default().getJSON(url, function (jsonData) {
+          console.log(jsonData);
+          var modalBody = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div>', {
+            "class": 'row'
+          });
+          jquery__WEBPACK_IMPORTED_MODULE_0___default().each(jsonData.rows, function (index, link) {
+            if (models.includes(link.product.code)) {
+              console.log(link.url);
+              var productLink = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<a>', {
+                "class": 'product-link',
+                href: link.url,
+                target: '_blank',
+                rel: 'noopener noreferrer'
+              });
+              var img = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<img>', {
+                'src': '/images/series/' + link.product.collection.slug + '/' + link.product.code + '.png'
+              });
+              var productImg = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div>', {
+                "class": 'product-img text-center',
+                'data-code': link.product.code
+              }).append(img);
+              var brandBox = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div>', {
+                "class": 'brand-box'
+              });
+              productLink.append(productImg).append(brandBox);
+              var colDiv = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div>', {
+                "class": 'col-6 col-sm-4 col-lg-3 col-xl-2'
+              }).append(productLink);
+              modalBody.append(colDiv);
+            }
+          });
+          modal.find(".modal-body .row").remove();
+          modal.find(".modal-body").append(modalBody);
+          console.log(modalBody);
+        });
       });
     },
     onShowBsCollapse: function onShowBsCollapse() {
