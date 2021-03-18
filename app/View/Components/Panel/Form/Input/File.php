@@ -7,6 +7,11 @@ use Illuminate\View\Component;
 
 class File extends Component
 {
+    /**
+     * Create a new component instance.
+     *
+     * @return void
+     */
     public function __construct(
         public $name = null,
         public $class = null,
@@ -24,6 +29,6 @@ class File extends Component
      */
     public function render()
     {
-        return view('components.form.input.file');
+        return view('components.panel.form.input.file');
     }
 }

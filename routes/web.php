@@ -4,6 +4,7 @@ use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Panel\ReviewController;
 use App\Http\Controllers\ThxController;
 use App\Http\Controllers\WarrantyController;
 use Illuminate\Support\Facades\Route;
@@ -63,6 +64,12 @@ Route::middleware(['auth', 'verified', 'jwt.access'])->group(function () {
     Route::get('/panel', [\App\Http\Controllers\Panel\HomeController::class, 'index'])->name('back.home');
 
     Route::middleware(['can:isAdmin'])->group(function () {
-        //
+        Route::get('/panel/zgloszenie', [\App\Http\Controllers\Panel\ApplicationController::class, 'index'])->name('back.application');
+        Route::get('/panel/zgloszenie/{application}', [\App\Http\Controllers\Panel\ApplicationController::class, 'show'])->name('back.application.show');
+
+        Route::get('/panel/opinie', [ReviewController::class, 'index'])->name('back.review');
+        Route::get('/panel/opinie/dodaj', [ReviewController::class, 'create'])->name('back.review.create');
+        Route::get('/panel/opinie/zmien/{review}', [ReviewController::class, 'edit'])->name('back.review.edit');
+        Route::get('/panel/opinie/{review}', [ReviewController::class, 'show'])->name('back.review.show');
     });
 });

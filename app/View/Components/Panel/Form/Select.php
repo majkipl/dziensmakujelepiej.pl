@@ -1,20 +1,30 @@
 <?php
 
-namespace App\View\Components\Panel\Form\Input;
+namespace App\View\Components\Panel\Form;
 
 use Illuminate\Support\Str;
 use Illuminate\View\Component;
 
-class File extends Component
+class Select extends Component
 {
+    /**
+     * Create a new component instance.
+     *
+     * @return void
+     */
     public function __construct(
         public $name = null,
+        public $items = [],
         public $class = null,
+        public $classWrapper = null,
         public $error = '',
+        public $max = null,
+        public $placeholder = '',
         public $required = false,
+        public $selected = null
     )
     {
-        $this->name = $name ?? 'form_input_' . Str::random(8);
+        $this->name = $name ?? 'form_select_' . Str::random(8);
     }
 
     /**
@@ -24,6 +34,6 @@ class File extends Component
      */
     public function render()
     {
-        return view('components.form.input.file');
+        return view('components.panel.form.select');
     }
 }

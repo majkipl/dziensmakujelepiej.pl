@@ -5,13 +5,18 @@ namespace App\View\Components\Panel\Form\Input;
 use Illuminate\Support\Str;
 use Illuminate\View\Component;
 
-class File extends Component
+class Hidden extends Component
 {
+    /**
+     * Create a new component instance.
+     *
+     * @return void
+     */
     public function __construct(
         public $name = null,
         public $class = null,
         public $error = '',
-        public $required = false,
+        public $value = null
     )
     {
         $this->name = $name ?? 'form_input_' . Str::random(8);
@@ -24,6 +29,6 @@ class File extends Component
      */
     public function render()
     {
-        return view('components.form.input.file');
+        return view('components.panel.form.input.hidden');
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\Form\Input;
+namespace App\View\Components\Panel\Form\Input;
 
 use Illuminate\Support\Str;
 use Illuminate\View\Component;
