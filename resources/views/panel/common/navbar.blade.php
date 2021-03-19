@@ -40,6 +40,15 @@
                             <a href="{{ route('back.review') }}">Opinie</a>
                         </li>
                         <li>
+                            <a href="{{ route('back.collection') }}">Kolekcje</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('back.product') }}">Produkty</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('back.link') }}">Linki</a>
+                        </li>
+                        <li>
                             <a href="{{ route('back.application') }}">Zgłoszenia</a>
                         </li>
                     @endcan

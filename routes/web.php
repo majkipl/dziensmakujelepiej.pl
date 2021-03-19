@@ -4,7 +4,6 @@ use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\Panel\ReviewController;
 use App\Http\Controllers\ThxController;
 use App\Http\Controllers\WarrantyController;
 use Illuminate\Support\Facades\Route;
@@ -67,9 +66,20 @@ Route::middleware(['auth', 'verified', 'jwt.access'])->group(function () {
         Route::get('/panel/zgloszenie', [\App\Http\Controllers\Panel\ApplicationController::class, 'index'])->name('back.application');
         Route::get('/panel/zgloszenie/{application}', [\App\Http\Controllers\Panel\ApplicationController::class, 'show'])->name('back.application.show');
 
-        Route::get('/panel/opinie', [ReviewController::class, 'index'])->name('back.review');
-        Route::get('/panel/opinie/dodaj', [ReviewController::class, 'create'])->name('back.review.create');
-        Route::get('/panel/opinie/zmien/{review}', [ReviewController::class, 'edit'])->name('back.review.edit');
-        Route::get('/panel/opinie/{review}', [ReviewController::class, 'show'])->name('back.review.show');
+        Route::get('/panel/kolekcja', [\App\Http\Controllers\Panel\CollectionController::class, 'index'])->name('back.collection');
+        Route::get('/panel/kolekcja/{collection}', [\App\Http\Controllers\Panel\CollectionController::class, 'show'])->name('back.collection.show');
+
+        Route::get('/panel/produkt', [\App\Http\Controllers\Panel\ProductController::class, 'index'])->name('back.product');
+        Route::get('/panel/produkt/{product}', [\App\Http\Controllers\Panel\ProductController::class, 'show'])->name('back.product.show');
+
+        Route::get('/panel/link', [\App\Http\Controllers\Panel\LinkController::class, 'index'])->name('back.link');
+        Route::get('/panel/link/dodaj', [\App\Http\Controllers\Panel\LinkController::class, 'create'])->name('back.link.create');
+        Route::get('/panel/link/zmien/{link}', [\App\Http\Controllers\Panel\LinkController::class, 'edit'])->name('back.link.edit');
+        Route::get('/panel/link/{link}', [\App\Http\Controllers\Panel\LinkController::class, 'show'])->name('back.link.show');
+
+        Route::get('/panel/opinie', [\App\Http\Controllers\Panel\ReviewController::class, 'index'])->name('back.review');
+        Route::get('/panel/opinie/dodaj', [\App\Http\Controllers\Panel\ReviewController::class, 'create'])->name('back.review.create');
+        Route::get('/panel/opinie/zmien/{review}', [\App\Http\Controllers\Panel\ReviewController::class, 'edit'])->name('back.review.edit');
+        Route::get('/panel/opinie/{review}', [\App\Http\Controllers\Panel\ReviewController::class, 'show'])->name('back.review.show');
     });
 });

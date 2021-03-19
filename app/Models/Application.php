@@ -15,22 +15,38 @@ class Application extends Model
         'legal_1', 'legal_2', 'legal_3', 'legal_4'
     ];
 
-    public function setLegal1Attribute($value)
+    /**
+     * @param $value
+     * @return void
+     */
+    public function setLegal1Attribute($value): void
     {
         $this->attributes['legal_1'] = $value === 'on';
     }
 
-    public function setLegal2Attribute($value)
+    /**
+     * @param $value
+     * @return void
+     */
+    public function setLegal2Attribute($value): void
     {
         $this->attributes['legal_2'] = $value === 'on';
     }
 
-    public function setLegal3Attribute($value)
+    /**
+     * @param $value
+     * @return void
+     */
+    public function setLegal3Attribute($value): void
     {
         $this->attributes['legal_3'] = $value === 'on';
     }
 
-    public function setLegal4Attribute($value)
+    /**
+     * @param $value
+     * @return void
+     */
+    public function setLegal4Attribute($value): void
     {
         $this->attributes['legal_4'] = $value === 'on';
     }
