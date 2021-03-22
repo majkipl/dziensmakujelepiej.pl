@@ -24,6 +24,8 @@ class ApplicationService
         try {
             $application = new Application($data);
 
+            /** @var Application $application */
+
             if( $request->file('img_receipt') ) {
                 $application->img_receipt = $request->file('img_receipt')->store('public/receipts');
             }
@@ -31,7 +33,7 @@ class ApplicationService
                 $application->img_ean = $request->file('img_ean')->store('public/eans');
             }
             if( $request->file('img_box') ) {
-                $application->img_ean = $request->file('img_box')->store('public/boxs');
+                $application->img_box = $request->file('img_box')->store('public/boxs');
             }
 
             $params = $request->all();
@@ -46,7 +48,7 @@ class ApplicationService
             DB::commit();
 
             return $application;
-        } catch (Exception $e) {
+        } catch (Exception) {
             DB::rollBack();
 
             throw new Exception('Nie można zapisać zgłoszenia');

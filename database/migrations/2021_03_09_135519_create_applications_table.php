@@ -1,5 +1,7 @@
 <?php
 
+use App\Enums\Purchase;
+use App\Enums\Whence;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -11,7 +13,7 @@ class CreateApplicationsTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('applications', function (Blueprint $table) {
             $table->id()->startingValue(202800000);
@@ -22,8 +24,8 @@ class CreateApplicationsTable extends Migration
             $table->string('flat', 16);
             $table->string('zip', 6);
             $table->string('city', 128);
-            $table->enum('purchase', \App\Enums\Purchase::ALL);
-            $table->enum('whence', \App\Enums\Whence::ALL);
+            $table->enum('purchase', Purchase::ALL);
+            $table->enum('whence', Whence::ALL);
             $table->string('whence_other', 128)->nullable();
             $table->string('img_receipt', 255);
             $table->string('img_ean', 255);
@@ -43,7 +45,7 @@ class CreateApplicationsTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('applications');
     }

@@ -7,7 +7,6 @@ use App\Http\Requests\Api\IndexApplicationRequest;
 use App\Models\Application;
 use App\Traits\ApiRequestParametersTrait;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
 class ApplicationController extends Controller

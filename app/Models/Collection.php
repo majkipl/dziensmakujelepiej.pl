@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 /**
  * @property string $name
  * @property string $slug
+ * @property mixed $id
  */
 class Collection extends Model
 {
@@ -47,7 +48,7 @@ class Collection extends Model
      * @param $searchable
      * @return mixed
      */
-    public function scopeSearch($query, $search, $searchable)
+    public function scopeSearch($query, $search, $searchable): mixed
     {
         if ($search && $searchable) {
             $query->where(function ($query) use ($search, $searchable) {
@@ -73,7 +74,7 @@ class Collection extends Model
      * @param $filter
      * @return mixed
      */
-    public function scopeFilter($query, $filter)
+    public function scopeFilter($query, $filter): mixed
     {
         if ($filter) {
             $filters = json_decode($filter, true);

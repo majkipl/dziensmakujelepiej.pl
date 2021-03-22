@@ -13,7 +13,7 @@ class ApplicationFactory extends Factory
      *
      * @return array
      */
-    public function definition()
+    public function definition(): array
     {
         $purchase = $this->faker->randomElement(Purchase::ALL);
         $whence = $this->faker->randomElement(Whence::ALL);

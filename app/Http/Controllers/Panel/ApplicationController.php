@@ -4,16 +4,25 @@ namespace App\Http\Controllers\Panel;
 
 use App\Http\Controllers\Controller;
 use App\Models\Application;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
 class ApplicationController extends Controller
 {
-    public function index()
+    /**
+     * @return View
+     */
+    public function index(): View
     {
         return view('panel/application/index');
     }
 
-    public function show(Request $request, int $id)
+    /**
+     * @param Request $request
+     * @param int $id
+     * @return View
+     */
+    public function show(Request $request, int $id): View
     {
         $application = Application::where('id','=',$id)->first();
 

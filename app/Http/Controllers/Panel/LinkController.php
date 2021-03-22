@@ -3,19 +3,24 @@
 namespace App\Http\Controllers\Panel;
 
 use App\Http\Controllers\Controller;
-use App\Models\Collection;
 use App\Models\Link;
 use App\Models\Product;
-use App\Models\Review;
+use Illuminate\Contracts\View\View;
 
 class LinkController extends Controller
 {
-    public function index()
+    /**
+     * @return View
+     */
+    public function index(): View
     {
         return view('panel/link/index');
     }
 
-    public function create()
+    /**
+     * @return View
+     */
+    public function create(): View
     {
         $products = Product::all()->map(function ($product){
             $product['name'] = $product['code'];
@@ -27,14 +32,22 @@ class LinkController extends Controller
         ]);
     }
 
-    public function show(Link $link)
+    /**
+     * @param Link $link
+     * @return View
+     */
+    public function show(Link $link): View
     {
         return view('panel/link/show', [
             'link' => $link
         ]);
     }
 
-    public function edit(Link $link)
+    /**
+     * @param Link $link
+     * @return View
+     */
+    public function edit(Link $link): View
     {
         $products = Product::all()->map(function ($product){
             $product['name'] = $product['code'];

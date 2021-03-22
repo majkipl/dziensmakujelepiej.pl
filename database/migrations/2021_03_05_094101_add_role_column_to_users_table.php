@@ -12,7 +12,7 @@ class AddRoleColumnToUsersTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
             $table->enum('role', UserRole::TYPES)->default(UserRole::USER)->after('email');
@@ -24,7 +24,7 @@ class AddRoleColumnToUsersTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
             //

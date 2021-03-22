@@ -12,7 +12,7 @@ class ApplicationServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
         $this->app->bind(ApplicationService::class, function ($app) {
             return new ApplicationService();

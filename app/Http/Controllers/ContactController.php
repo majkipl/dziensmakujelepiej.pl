@@ -6,11 +6,13 @@ use App\Http\Requests\ContactSendRequest;
 use App\Services\ContactService;
 use Exception;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
 class ContactController extends Controller
 {
+    /**
+     * @param ContactService $contactService
+     */
     public function __construct(protected ContactService $contactService)
     {
     }
@@ -35,7 +37,7 @@ class ContactController extends Controller
                 ],
                 Response::HTTP_OK
             );
-        } catch (Exception $e) {
+        } catch (Exception) {
             return response()->json(
                 [
                     'errors' => [

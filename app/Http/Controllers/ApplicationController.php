@@ -8,14 +8,21 @@ use App\Http\Requests\StoreApplicationRequest;
 use App\Services\ApplicationService;
 use Exception;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 
 class ApplicationController extends Controller
 {
+    /**
+     * @param ApplicationService $applicationService
+     */
     public function __construct(protected ApplicationService $applicationService)
     {
     }
 
+    /**
+     * @return View
+     */
     public function form(): View
     {
         return view(
@@ -27,15 +34,17 @@ class ApplicationController extends Controller
         );
     }
 
-    public function store(StoreApplicationRequest $request)
+    /**
+     * @param StoreApplicationRequest $request
+     * @return JsonResponse
+     */
+    public function store(StoreApplicationRequest $request): JsonResponse
     {
         try {
-            $application = $this->applicationService->store(
+            $this->applicationService->store(
                 $request->validated(),
                 $request
             );
-
-//            $request->session()->put('application_id', $application->id);
 
             return response()->json(
                 [
@@ -46,7 +55,7 @@ class ApplicationController extends Controller
                 ],
                 Response::HTTP_OK
             );
-        } catch (Exception $e) {
+        } catch (Exception) {
             return response()->json(
                 [
                     'errors' => [

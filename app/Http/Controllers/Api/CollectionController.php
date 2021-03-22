@@ -8,7 +8,6 @@ use App\Models\Collection;
 use App\Models\Link;
 use App\Traits\ApiRequestParametersTrait;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
 class CollectionController extends Controller

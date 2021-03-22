@@ -23,7 +23,9 @@ Route::get('/collection/{slug}/links', [CollectionController::class, 'links'])->
 Route::middleware(['api.keys'])->group(function () {
     Route::middleware(['api.auth'])->group(function () {
         Route::get('/applications', [ApplicationController::class, 'index'])->name('api.application');
+
         Route::get('/collections', [CollectionController::class, 'index'])->name('api.collection');
+
         Route::get('/products', [ProductController::class, 'index'])->name('api.product');
 
         Route::get('/reviews', [ReviewController::class, 'index'])->name('api.review');

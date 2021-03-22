@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Collection;
 use App\Models\Link;
 use App\Models\Review;
-use Illuminate\Http\Request;
+use Illuminate\Contracts\View\View;
 
 class CollectionController extends Controller
 {
-    public function honeycomb()
+    public function honeycomb(): View
     {
         $slug = 'honeycomb';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -20,7 +19,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function structure()
+    public function structure(): View
     {
         $slug = 'structure';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -31,7 +30,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function inspire()
+    public function inspire(): View
     {
         $slug = 'inspire';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -42,7 +41,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function retro()
+    public function retro(): View
     {
         $slug = 'retro';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -53,7 +52,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function geoSteel()
+    public function geoSteel(): View
     {
         $slug = 'geo-steel';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -64,7 +63,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function buckingham()
+    public function buckingham(): View
     {
         $slug = 'buckingham';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -75,7 +74,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function precisionControl()
+    public function precisionControl(): View
     {
         $slug = 'precision-control';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -86,7 +85,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function coloursPlus()
+    public function coloursPlus(): View
     {
         $slug = 'colours-plus';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -97,7 +96,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function texturesPlus()
+    public function texturesPlus(): View
     {
         $slug = 'textures-plus';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -108,7 +107,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function powerSteamUltra()
+    public function powerSteamUltra(): View
     {
         $slug = 'power-steam-ultra';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -122,7 +121,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function steamGenie()
+    public function steamGenie(): View
     {
         $slug = 'steam-genie';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -136,7 +135,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function cooperExpressPro()
+    public function cooperExpressPro(): View
     {
         $slug = 'cooper-express-pro';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -150,7 +149,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function cooperExpress()
+    public function cooperExpress(): View
     {
         $slug = 'cooper-express';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -164,7 +163,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function impact()
+    public function impact(): View
     {
         $slug = 'impact';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -178,7 +177,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function colourControlSupreme()
+    public function colourControlSupreme(): View
     {
         $slug = 'colour-control-supreme';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -192,7 +191,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function quietSuperSteam()
+    public function quietSuperSteam(): View
     {
         $slug = 'quiet-super-steam';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -206,7 +205,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function oneTemperature()
+    public function oneTemperature(): View
     {
         $slug = 'one-temperature';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -220,7 +219,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function pearlGlide()
+    public function pearlGlide(): View
     {
         $slug = 'pearl-glide';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -236,7 +235,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function mikserRecznySwirl()
+    public function mikserRecznySwirl(): View
     {
         $slug = 'mikser-reczny-swirl';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -250,7 +249,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function opiekaczDeepFill()
+    public function opiekaczDeepFill(): View
     {
         $slug = 'opiekacz-deep-fill-3w1-fiesta';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -264,7 +263,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function parowarCyfrowyMaxicook()
+    public function parowarCyfrowyMaxicook(): View
     {
         $slug = 'parowar-cyfrowy-maxicook';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -278,7 +277,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function ryzowarCookHome()
+    public function ryzowarCookHome(): View
     {
         $slug = 'ryzowar-cook-home';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -292,7 +291,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function zestawDoRaclette()
+    public function zestawDoRaclette(): View
     {
         $slug = 'zestaw-do-raclette-fiesta';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -306,7 +305,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function wyciskarkaDoCytrusow()
+    public function wyciskarkaDoCytrusow(): View
     {
         $slug = 'wyciskarka-do-cytrusow';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -320,7 +319,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function frytownicaCyclofryPlus()
+    public function frytownicaCyclofryPlus(): View
     {
         $slug = 'frytownica-cyclofry-plus';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -334,7 +333,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function blenderKielichowySensigence()
+    public function blenderKielichowySensigence(): View
     {
         $slug = 'blender-kielichowy-sensigence';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();
@@ -348,7 +347,7 @@ class CollectionController extends Controller
         ]);
     }
 
-    public function blenderRecznyDesire()
+    public function blenderRecznyDesire(): View
     {
         $slug = 'blender-reczny-desire';
         $reviews = Review::withWhereHas('collection', fn($query) => $query->where('slug', $slug))->get();

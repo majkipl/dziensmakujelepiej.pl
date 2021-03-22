@@ -11,7 +11,7 @@ class AddLinkRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
         return true;
     }
@@ -25,7 +25,7 @@ class AddLinkRequest extends FormRequest
     {
 
         return [
-            'url' => 'bail|required|string|max:512|url',
+            'url' => 'bail|required|max:512|url',
             'product_id' => 'required|integer|exists:products,id'
         ];
     }

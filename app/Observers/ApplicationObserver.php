@@ -20,6 +20,7 @@ class ApplicationObserver
      */
     public function created(Application $application): void
     {
+        /** @var Application $application */
         $this->applicationService->sendMail(
             $application->email,
             ['id' => $application->id]

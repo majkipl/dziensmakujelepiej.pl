@@ -12,7 +12,7 @@ class ReviewFactory extends Factory
      *
      * @return array
      */
-    public function definition()
+    public function definition(): array
     {
         $collection = Collection::count() ? Collection::inRandomOrder()->first() : Collection::factory()->create();
 

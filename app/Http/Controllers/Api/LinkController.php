@@ -4,18 +4,13 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\AddLinkRequest;
-use App\Http\Requests\Api\AddReviewRequest;
 use App\Http\Requests\Api\IndexLinkRequest;
-use App\Http\Requests\Api\IndexReviewRequest;
 use App\Http\Requests\Api\UpdateLinkRequest;
-use App\Http\Requests\Api\UpdateReviewRequest;
 use App\Models\Link;
-use App\Models\Review;
 use App\Traits\ApiRequestParametersTrait;
 use App\Traits\ApiResponseTrait;
 use Exception;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;

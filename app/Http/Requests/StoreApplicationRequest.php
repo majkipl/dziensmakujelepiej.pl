@@ -14,7 +14,7 @@ class StoreApplicationRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
         return true;
     }
@@ -35,7 +35,7 @@ class StoreApplicationRequest extends FormRequest
                 'regex:/^\+48(\s)?([1-9]\d{8}|[1-9]\d{2}\s\d{3}\s\d{3}|[1-9]\d{1}\s\d{3}\s\d{2}\s\d{2}|[1-9]\d{1}\s\d{2}\s\d{3}\s\d{2}|[1-9]\d{1}\s\d{2}\s\d{2}\s\d{3}|[1-9]\d{1}\s\d{4}\s\d{2}|[1-9]\d{2}\s\d{2}\s\d{2}\s\d{2}|[1-9]\d{2}\s\d{3}\s\d{2}|[1-9]\d{2}\s\d{4})$/'
             ],
             'street' => 'bail|required|string|min:3|max:128',
-            'flat' => 'bail|required|string|min:3|max:16',
+            'flat' => 'bail|required|string|max:16',
             'zip' => 'bail|required|regex:/^[0-9]{2}\-[0-9]{3}$/',
             'city' => 'bail|required|string|min:3|max:128',
             'purchase' => [

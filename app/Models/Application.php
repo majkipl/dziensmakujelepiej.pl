@@ -5,6 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property string $email
+ * @property string $img_receipt
+ * @property string $img_ean
+ * @property string $img_box
+ * @property bool $legal_1
+ * @property bool $legal_2
+ * @property bool $legal_3
+ * @property bool $legal_4
+ * @property mixed $id
+ */
 class Application extends Model
 {
     use HasFactory;
@@ -57,7 +68,7 @@ class Application extends Model
      * @param $searchable
      * @return mixed
      */
-    public function scopeSearch($query, $search, $searchable)
+    public function scopeSearch($query, $search, $searchable): mixed
     {
         if ($search && $searchable) {
             $query->where(function ($query) use ($search, $searchable) {
@@ -94,7 +105,7 @@ class Application extends Model
      * @param $filter
      * @return mixed
      */
-    public function scopeFilter($query, $filter)
+    public function scopeFilter($query, $filter): mixed
     {
         if ($filter) {
             $filters = json_decode($filter, true);

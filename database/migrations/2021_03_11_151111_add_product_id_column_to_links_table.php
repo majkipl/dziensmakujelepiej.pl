@@ -11,7 +11,7 @@ class AddProductIdColumnToLinksTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::table('links', function (Blueprint $table) {
             $table->unsignedBigInteger('product_id');
@@ -24,7 +24,7 @@ class AddProductIdColumnToLinksTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::table('links', function (Blueprint $table) {
             $table->dropForeign('links_product_id_foreign');

@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
+/**
+ * @property mixed $id
+ */
 class Product extends Model
 {
     use HasFactory;
@@ -37,7 +40,7 @@ class Product extends Model
      * @param $searchable
      * @return mixed
      */
-    public function scopeSearch($query, $search, $searchable)
+    public function scopeSearch($query, $search, $searchable): mixed
     {
         if ($search && $searchable) {
             $query->where(function ($query) use ($search, $searchable) {
@@ -68,7 +71,7 @@ class Product extends Model
      * @param $filter
      * @return mixed
      */
-    public function scopeFilter($query, $filter)
+    public function scopeFilter($query, $filter): mixed
     {
         if ($filter) {
             $filters = json_decode($filter, true);

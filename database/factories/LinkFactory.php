@@ -12,7 +12,7 @@ class LinkFactory extends Factory
      *
      * @return array
      */
-    public function definition()
+    public function definition(): array
     {
         $product = Product::count() ? Product::inRandomOrder()->first() : Product::factory()->create();
 

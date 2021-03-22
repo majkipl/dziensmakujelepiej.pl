@@ -15,7 +15,7 @@ class UserSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         $data = [];
 
@@ -24,7 +24,7 @@ class UserSeeder extends Seeder
             'email' => env('APP_ADMIN_MAIL'),
             'role' => UserRole::ADMIN,
             'email_verified_at' => now(),
-            'password' => Hash::make(env('APP_ADMIN_PASS'),), // password
+            'password' => Hash::make(env('APP_ADMIN_PASS')), // password
             'remember_token' => Str::random(10),
         ];
 

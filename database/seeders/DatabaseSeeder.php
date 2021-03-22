@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         $data = [
             [
@@ -911,6 +911,7 @@ class DatabaseSeeder extends Seeder
                 'slug' => $item['slug']
             ]);
 
+            /** @var Collection $collection */
             foreach ($reviews as $review) {
                 Review::factory()->create(array_merge($review, ['collection_id' => $collection->id]));
             }
@@ -922,6 +923,7 @@ class DatabaseSeeder extends Seeder
                 ]);
 
                 foreach ($itemProduct['links'] as $link ) {
+                    /** @var Product $product */
                     Link::factory()->create([
                         'url' => $link,
                         'product_id' => $product->id

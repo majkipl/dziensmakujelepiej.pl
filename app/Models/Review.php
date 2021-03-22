@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+/**
+ * @property mixed $id
+ * @property mixed $collection
+ */
 class Review extends Model
 {
     use HasFactory;
@@ -26,7 +30,8 @@ class Review extends Model
      * @param $constraint
      * @return mixed
      */
-    public function scopeWithWhereHas($query, $relation, $constraint){
+    public function scopeWithWhereHas($query, $relation, $constraint): mixed
+    {
         return $query->whereHas($relation, $constraint)
             ->with([$relation => $constraint]);
     }
@@ -37,7 +42,7 @@ class Review extends Model
      * @param $searchable
      * @return mixed
      */
-    public function scopeSearch($query, $search, $searchable)
+    public function scopeSearch($query, $search, $searchable): mixed
     {
         if ($search && $searchable) {
             $query->where(function ($query) use ($search, $searchable) {
@@ -68,7 +73,7 @@ class Review extends Model
      * @param $filter
      * @return mixed
      */
-    public function scopeFilter($query, $filter)
+    public function scopeFilter($query, $filter): mixed
     {
         if ($filter) {
             $filters = json_decode($filter, true);
