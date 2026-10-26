@@ -1,0 +1,15 @@
+#error {
+  background-image: linear-gradient($dark-blue 81px, $transparent 81px);
+  padding: 231px 0 150px;
+
+  .title {
+    margin-bottom: 20px;
+  }
+
+  .info {
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+  }
+}
